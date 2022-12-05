@@ -424,12 +424,13 @@ window.onload = wrap_img;
 
 <span class="c1"># given and index this will print InfoDb content</span>
 <span class="k">def</span> <span class="nf">print_data</span><span class="p">(</span><span class="n">d_rec</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"foodName"</span><span class="p">],</span> <span class="s2">"meat:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"timeToPrepare"</span><span class="p">])</span>  <span class="c1"># using comma puts space between values</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">d_rec</span><span class="p">[</span><span class="s2">"foodName"</span><span class="p">],</span> <span class="s2">"Time to Prepare:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"timeToPrepare"</span><span class="p">])</span>  <span class="c1"># using comma puts space between values</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Meat:"</span><span class="p">,</span> <span class="n">d_rec</span><span class="p">[</span><span class="s2">"meat"</span><span class="p">])</span>
 
 
 <span class="c1"># for loop iterates on length of InfoDb</span>
 <span class="k">def</span> <span class="nf">for_loop</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"For loop output</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">""</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">InfoDb</span><span class="p">:</span>
         <span class="n">print_data</span><span class="p">(</span><span class="n">record</span><span class="p">)</span>
 
