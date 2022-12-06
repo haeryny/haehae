@@ -13,17 +13,6 @@
   
     
         ,"post1": {
-            "title": "Video 3.3-4 Hacks",
-            "content": "",
-            "url": "https://haeryny.github.io/haehae/week2/notes/2022/12/06/3.3-4-Hacks-and-Notes.html",
-            "relUrl": "/week2/notes/2022/12/06/3.3-4-Hacks-and-Notes.html",
-            "date": " • Dec 6, 2022"
-        }
-        
-    
-  
-    
-        ,"post2": {
             "title": "Video 3.8-10 Hacks",
             "content": "Quiz Score . I got 9/10 right on the quiz, and I got the fourth question wrong. I got it wrong because I thought extend would add something to the list, but extend actually combines two list while append is used to add an element to the end of the list, so that is why I got it wrong. .",
             "url": "https://haeryny.github.io/haehae/week3/notes/2022/12/05/3.8-10-Hacks-and-Notes.html",
@@ -34,12 +23,23 @@
     
   
     
-        ,"post3": {
+        ,"post2": {
             "title": "Video 3.5-7 Hacks",
             "content": "3.5 Hacks . Binary Practice . Using psuedocode operators determine if the statements are true or false. The number type will be indicated in parentheses. . 1. 90(D) = 1000(B) . A. True | . 2. 10(D) ≠ 0110(B) . B. False | . 3. 56(D) ≥ 111000(B) . A. True | . 3. 99(D) &lt; 1110011(B) . A. True | . AND Operator Value 1 Value 2 Result . 1 | 0 | 1 | . 1 | 0 | 0 | . 1 | 1 | 0 | . 1 | 0 | 0 | . OR Operator Value 1 Value 2 Result . 1 | 1 | 0 | . 0 | 0 | 1 | . 0 | 1 | 1 | . 0 | 1 | 0 | . Not operator Not Value Result . Not | 1 | 0 | . Not | 0 | 1 | . . # Practice with these statements print(20 == 20) # How can you change the operator to print a value of False? x = 30 y = 20 z = 10 print(x &gt; y + z) # How can this return true by only manipulating the operator? # Manipulate the variables x, y, and z to make the below statement return true print(x == z) . True False False . 3.6 Hacks . AP Prep . 1. What is displayed by this code? . result &lt;-- 75 | IF result &lt; 80 { DISPLAY(&quot;Please schedule a retake.&quot;) } | ELSE { DISPLAY(&quot;Nice job!&quot;) } | . Nice job! | 2. How is an if statement different from an if-else statement. . An if statement will only go through a process if a condition is met. An if-else statement will go through code no matter the conditions. | 3. What would be most appropriate for this situation? Ben wants to check his bank account. If his car fuel is full, he will go to the bank. Otherwise, he will go home. If he goes to the bank, he will withdraw money only if his balance is above $1000. . If-else statement | 4. What would be most appropriate for this situation? Luke wants to play basketball. If it is sunny outside he will go to the park to play basketball. . If statement | Using Python . animals = [&quot;lion&quot;, &quot;tiger&quot;, &quot;wildebeest&quot;, &quot;shark&quot;, &quot;jellyfish&quot;, &quot;blobfish&quot;, &quot;raven&quot;] for i in animals: if i == &quot;shark&quot;: # What boolean value does this statement cause? 3 print(&quot;Fun Fact: The smallest shark is the dwarf lantern shark, and it is small enough to hold in your hand!&quot;) if i == &quot;lion&quot;: # What boolean value does this statement cause? 3 print(&quot;It lives in the desert&quot;) else: print(i) # Practice # Using only one more if statement, alter the code to print out a statement saying if an animal lives in the desert, based on booleans . It lives in the desert tiger wildebeest Fun Fact: The smallest shark is the dwarf lantern shark, and it is small enough to hold in your hand! shark jellyfish blobfish raven . 3.7 Hacks . Exercise 1 . Create dictionaries for multiple food items, with the listed specifications Chicken Alfredo, Meat: Chicken, Time to Prepare: 60 minutes | Cheese Quesadilla, Meat: None, Time to Prepare: 10 minutes | Beef Wellington, Meat: Beef, Time to Prepare: 150 minutes | . | Used nested conditionals, determine which meal you can cook, given that a) you have no meat at home, and b) you only have 30 minutes to make the meal | . InfoDb = [] # Append to List a Dictionary InfoDb.append({ &quot;foodName&quot;: &quot;Chicken Alfredo&quot;, &quot;meat&quot;: &quot;Chicken&quot;, &quot;timeToPrepare&quot;: &quot;60 minutes&quot;, }) # Append to List a 2nd Dictionary of key/values InfoDb.append({ &quot;foodName&quot;: &quot;Cheese Quesadilla&quot;, &quot;meat&quot;: &quot;None&quot;, &quot;timeToPrepare&quot;: &quot;10 minutes&quot;, }) # Append to List a 3rd Dictionary of key/values InfoDb.append({ &quot;foodName&quot;: &quot;Beef Wellington&quot;, &quot;meat&quot;: &quot;Beef&quot;, &quot;timeToPrepare&quot;: &quot;150 minutes&quot;, }) # given and index this will print InfoDb content def print_data(d_rec): print(d_rec[&quot;foodName&quot;], &quot;Time to Prepare:&quot;, d_rec[&quot;timeToPrepare&quot;]) # using comma puts space between values print(&quot;Meat:&quot;, d_rec[&quot;meat&quot;]) # for loop iterates on length of InfoDb def for_loop(): print(&quot;&quot;) for record in InfoDb: print_data(record) for_loop() . Chicken Alfredo Time to Prepare: 60 minutes Meat: Chicken Cheese Quesadilla Time to Prepare: 10 minutes Meat: None Beef Wellington Time to Prepare: 150 minutes Meat: Beef . Exercise 2 . Make a flowchart(here is one we used) and write pseudocode for the following scenario. . Mr. Yeung would like to grade live reviews. | He wants to see if each student has at least 2 issues on their project. If they don&#39;t they receive a score of 2.0. | If they have at least 2 issues, check that they have completed at least 5 of their scrumboard tasks. | If they have completed 5 scrumboard tasks, give the student a 2.7. If they have not completed 5 scrumboard tasks, give them a score of 2.5. If they have completed more than 5 tasks, give them a score of 3.0. | How much would a student with 3 issues and 1 complete scrumboard task receive? | . They would get 3.0. .",
             "url": "https://haeryny.github.io/haehae/week3/notes/2022/12/04/3.5-7-Hacks-and-Notes.html",
             "relUrl": "/week3/notes/2022/12/04/3.5-7-Hacks-and-Notes.html",
             "date": " • Dec 4, 2022"
+        }
+        
+    
+  
+    
+        ,"post3": {
+            "title": "Video 3.3-4 Hacks",
+            "content": "",
+            "url": "https://haeryny.github.io/haehae/week2/notes/2022/12/03/3.3-4-Hacks-and-Notes.html",
+            "relUrl": "/week2/notes/2022/12/03/3.3-4-Hacks-and-Notes.html",
+            "date": " • Dec 3, 2022"
         }
         
     
