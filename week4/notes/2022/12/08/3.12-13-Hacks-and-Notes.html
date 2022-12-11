@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      4 min read
     
 </span></p>
 
@@ -144,6 +144,13 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h4"><a href="#What-is-important-to-do-while-writing-procedures">What is important to do while writing procedures </a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#3.12-Part-1-Hacks">3.12 Part 1 Hacks </a></li>
+<li class="toc-entry toc-h3"><a href="#3.12-Homework/Hacks-part-2">3.12 Homework/Hacks part 2 </a></li>
+<li class="toc-entry toc-h3"><a href="#3.13-Hacks">3.13 Hacks </a></li>
 </ul>
 </li>
 </ul><!--
@@ -209,6 +216,101 @@ window.onload = wrap_img;
 <a class="anchor" href="#What-is-important-to-do-while-writing-procedures" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is important to do while writing procedures<a class="anchor-link" href="#What-is-important-to-do-while-writing-procedures"> </a>
 </h4>
 <p>It is important to understand you procudeures procedure does when creating one as it will help you create a impactful procedure</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+<h3 id="3.12-Part-1-Hacks">
+<a class="anchor" href="#3.12-Part-1-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.12 Part 1 Hacks<a class="anchor-link" href="#3.12-Part-1-Hacks"> </a>
+</h3>
+<ul>
+<li>Problem 1: This problem involves parameters</li>
+</ul>
+<p>Qais is writing code to calculate formulas from his math class. He's currently working on a procedure to calculate average speed, based on this formula:</p>
+<p>Average speed = Total Time/Total Distance​</p>
+<p>Highlight which of these is the best procedure for calculating and displaying average speed.</p>
+<p>PROCEDURE calcAvgSpeed (distance, time) { DISPLAY (distance/time) }</p>
+<p>PROCEDURE calcAvgSpeed (distance) { DISPLAY (distance/time) }</p>
+<p>PROCEDURE calcAvgSpeed (distance, time) { DISPLAY (time/distance) }</p>
+<ul>
+<li>Problem 2: Procedures with return values
+James Hunter is looking through his classmate's program and sees a procedure called heightenEmotions: PROCEDURE heightenEmotions(myEmotion)</li>
+</ul>
+<p>{ moreEnergy ← CONCAT(myEmotion, "!!!")</p>
+<p>moreVolume ← UPPER(moreEnergy)</p>
+<p>RETURN moreVolume }</p>
+<p>That procedure manipulates strings using two built-in procedures, CONCAT for concatenating two strings together, and UPPER for converting a string to uppercase.</p>
+<p>James Hunter then sees this line of code:</p>
+<p>heightenEmotions("im mad")</p>
+<p>After that line of code runs, will nothing be displayed?</p>
+<p>False</p>
+<ul>
+<li>Problem 3:
+Bubz is writing a program to calculate the carbon footprint of his activities. The procedure calcFlightFootprint calculates the pounds of carbon dioxide produced per passenger in a flight that covers a given number of miles and seats a given number of passengers.</li>
+</ul>
+<p>PROCEDURE calcFlightFootprint(numMiles, numPassengers) { CO2_PER_MILE ← 53.29</p>
+<p>carbonPerFlight ← numMiles * CO2_PER_MILE</p>
+<p>carbonPerPassenger ← carbonPerFlight / numPassengers</p>
+<p>RETURN carbonPerPassenger</p>
+<p>}</p>
+<p>Bubz wants to use that procedure to calculate the total footprint for his two upcoming flights: LA to NY: 2,451 miles and 118 passengers NY to London: 3,442 miles and 252 passengers</p>
+<p>Which of these code snippets successfully calculates and stores her total footprint? Highlight 2 answers.</p>
+<p>totalFootprint ← calcFlightFootprint(2451, 118) + calcFlightFootprint(3442, 252)</p>
+<p>totalFootprint ← calcFlightFootprint((2451, 118) + (3442, 252))</p>
+<h3 id="3.12-Homework/Hacks-part-2">
+<a class="anchor" href="#3.12-Homework/Hacks-part-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.12 Homework/Hacks part 2<a class="anchor-link" href="#3.12-Homework/Hacks-part-2"> </a>
+</h3>
+<p>a = 729</p>
+<p>the cost is $190.30</p>
+<p>answer = 39.444</p>
+<h3 id="3.13-Hacks">
+<a class="anchor" href="#3.13-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>3.13 Hacks<a class="anchor-link" href="#3.13-Hacks"> </a>
+</h3>
+<ol>
+<li>Create a procedure that is meant to replace the top running backs yards per game in one season if the current running back has more yards per game
+Necessary Parameters: toprbyardspg(100), currentrbyards(1260), totalGames(12)</li>
+</ol>
+<p>if currentrbyards(1260) &gt; toprbyardspg(100)
+    replace(toprbyardspg(100), currentrbyards(1260), totalGames(12))</p>
+<ol>
+<li>
+<p>Write a procedure that will allow the A+ to get to the 1, while avoiding the black boxes.
+PROCEDURE getAplus(){
+If (can_MoveForward):
+Move_Forward
+Else (can_MoveRight):
+Rotate_Right
+Move_Forward
+If (can_MoveLeft);
+Rotate_Left
+Move_forward
+}</p>
+</li>
+<li>
+<p>Which Is the Correct Way to define the Name of a Procedure?</p>
+</li>
+</ol>
+<p>B. PROCEDURE MyList</p>
+<p>because procedure should be in all caps and part of the procedure name should be capitalized</p>
+<ol>
+<li>Write A Procedure That gets the BeachBall To the Green Square
+PROCEDURE BallToGreen{
+Rotate_Left
+Move_Forward
+Rotate_Right 
+Move_Forward( until count = 6)
+break
+Rotate_Left
+Move_Forward (until count=2) 
+break
+}</li>
+</ol>
 
 </div>
 </div>
