@@ -144,6 +144,7 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h3"><a href="#Multiple-Choice">Multiple Choice </a></li>
 <li class="toc-entry toc-h3"><a href="#Short-Answer">Short Answer </a></li>
+<li class="toc-entry toc-h3"><a href="#Coding-Challenges">Coding Challenges </a></li>
 </ul>
 </li>
 </ul><!--
@@ -221,45 +222,112 @@ window.onload = wrap_img;
 </h3>
 <ol>
 <li>It is more efficient and speeds up the process of being able to look through the library rather than creating code that has be made for a word that already exists. For example, the randint function is where start is the minimum value and stop is the maximum value so I do not have to make a new piece of code to use that function. </li>
-<li>```python
-import random </li>
+<li>
 </ol>
-<p>names_string = input("Give me everybody's names, seperated by a comma.") #The function asks for names to input and is the piece of code that makes a list. 
-names = names_string.split(",") #This functions helps seperate the names one by one</p>
-<p>num_items = len(names) #makes the names into a list</p>
-<p>random_choice = random.randint(0, num_items - 1) #randint is the the function where start is the minimum which is 0 and the stop is maximum which is num_items - 1.</p>
-<p>person_who_will_pay = names[random_choice] #This chooses the random name</p>
-<p>print(f"{person_who_will_pay} is going to buy the meal today!") #This is the output.</p>
 
-<pre><code>
-### Coding Challenges
-1. Create a program to pick five random names from a list of at least 15 names
-```python
-import random 
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-names = [John, Jake, Jack, Alex, Ryan, Jaiden, Jayden, Jaden, Ethan, Emily, Ella, Ellie, Hailey, Kaylee, Bob]
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
 
-for i in range(5)
-    random_choice1 = random.randint(0, names - 1) 
-    i += 1
+<span class="n">names_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Give me everybody's names, seperated by a comma."</span><span class="p">)</span> <span class="c1">#The function asks for names to input and is the piece of code that makes a list. </span>
+<span class="n">names</span> <span class="o">=</span> <span class="n">names_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">","</span><span class="p">)</span> <span class="c1">#This functions helps seperate the names one by one</span>
 
-randomName = names[random_choice1, random_choice2, random_choice3, random_choice4, random_choice5] 
+<span class="n">num_items</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="c1">#makes the names into a list</span>
 
-print(randomName)</code></pre>
-<ol>
-<li>Create a program to simulate a dice game where each player rolls two fair dice (6 sides); the player with the greater sum wins<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dice</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
- <span class="n">rolls</span> <span class="o">=</span> <span class="p">[]</span>
- <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-     <span class="n">two_dice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-     <span class="n">rolls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">two_dice</span><span class="p">)</span>
- <span class="k">return</span> <span class="n">rolls</span>
+<span class="n">random_choice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_items</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">#randint is the the function where start is the minimum which is 0 and the stop is maximum which is num_items - 1. </span>
+
+<span class="n">person_who_will_pay</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">random_choice</span><span class="p">]</span> <span class="c1">#This chooses the random name</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">person_who_will_pay</span><span class="si">}</span><span class="s2"> is going to buy the meal today!"</span><span class="p">)</span> <span class="c1">#This is the output.</span>
 </pre></div>
-</li>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Coding-Challenges">
+<a class="anchor" href="#Coding-Challenges" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coding Challenges<a class="anchor-link" href="#Coding-Challenges"> </a>
+</h3>
+<ol>
+<li>Create a program to pick five random names from a list of at least 15 names</li>
 </ol>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"John"</span><span class="p">,</span> <span class="s2">"Jake"</span><span class="p">,</span> <span class="s2">"Jack"</span><span class="p">,</span> <span class="s2">"Alex"</span><span class="p">,</span> <span class="s2">"Ryan"</span><span class="p">,</span> <span class="s2">"Jaiden"</span><span class="p">,</span> <span class="s2">"Jayden"</span><span class="p">,</span> <span class="s2">"Jaden"</span><span class="p">,</span> <span class="s2">"Ethan"</span><span class="p">,</span> <span class="s2">"Emily"</span><span class="p">,</span> <span class="s2">"Ella"</span><span class="p">,</span> <span class="s2">"Ellie"</span><span class="p">,</span> <span class="s2">"Hailey"</span><span class="p">,</span> <span class="s2">"Kaylee"</span><span class="p">,</span> <span class="s2">"Bob"</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="n">random_choice1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">names</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> 
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">randomName</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">random_choice1</span><span class="p">]</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">randomName</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Create a program to simulate a dice game where each player rolls two fair dice (6 sides); the player with the greater sum wins</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">dice</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">rolls</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">two_dice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+        <span class="n">rolls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">two_dice</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">rolls</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
