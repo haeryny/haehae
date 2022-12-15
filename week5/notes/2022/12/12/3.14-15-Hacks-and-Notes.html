@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -146,6 +146,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Multiple-Choice">Multiple Choice </a></li>
 <li class="toc-entry toc-h3"><a href="#Short-Answer">Short Answer </a></li>
 <li class="toc-entry toc-h3"><a href="#Coding-Challenges">Coding Challenges </a></li>
+<li class="toc-entry toc-h3"><a href="#Extra-Credit">Extra Credit </a></li>
 </ul>
 </li>
 </ul><!--
@@ -240,7 +241,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
 
 <span class="n">names_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Give me everybody's names, seperated by a comma."</span><span class="p">)</span> <span class="c1">#The function asks for names to input and is the piece of code that makes a list. </span>
 <span class="n">names</span> <span class="o">=</span> <span class="n">names_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">","</span><span class="p">)</span> <span class="c1">#This functions helps seperate the names one by one</span>
@@ -281,17 +282,14 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
-
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
 <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"John"</span><span class="p">,</span> <span class="s2">"Jake"</span><span class="p">,</span> <span class="s2">"Jack"</span><span class="p">,</span> <span class="s2">"Alex"</span><span class="p">,</span> <span class="s2">"Ryan"</span><span class="p">,</span> <span class="s2">"Jaiden"</span><span class="p">,</span> <span class="s2">"Jayden"</span><span class="p">,</span> <span class="s2">"Jaden"</span><span class="p">,</span> <span class="s2">"Ethan"</span><span class="p">,</span> <span class="s2">"Emily"</span><span class="p">,</span> <span class="s2">"Ella"</span><span class="p">,</span> <span class="s2">"Ellie"</span><span class="p">,</span> <span class="s2">"Hailey"</span><span class="p">,</span> <span class="s2">"Kaylee"</span><span class="p">,</span> <span class="s2">"Bob"</span><span class="p">]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-    <span class="n">random_choice1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">names</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> 
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"5 random names are"</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">names</span><span class="p">))</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-
-<span class="n">randomName</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">random_choice1</span><span class="p">]</span> 
-
-<span class="nb">print</span><span class="p">(</span><span class="n">randomName</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -318,15 +316,111 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">dice</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">rolls</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">two_dice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-        <span class="n">rolls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">two_dice</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">rolls</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">oneFirstRoll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">oneSecondRoll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">oneScore</span> <span class="o">=</span> <span class="n">oneFirstRoll</span> <span class="o">+</span> <span class="n">oneSecondRoll</span>
+
+<span class="n">twoFirstRoll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">twoSecondRoll</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">twoScore</span> <span class="o">=</span> <span class="n">twoFirstRoll</span> <span class="o">+</span> <span class="n">twoSecondRoll</span>
+
+<span class="k">if</span> <span class="n">oneScore</span> <span class="o">&gt;</span> <span class="n">twoScore</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"Player one won with a score of"</span><span class="p">,</span><span class="n">playerOne</span><span class="p">())</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"Player two lost with a score of"</span><span class="p">,</span><span class="n">playerTwo</span><span class="p">())</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"Player two won with a score of"</span><span class="p">,</span><span class="n">playerTwo</span><span class="p">())</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">"Player one lost with a score of"</span><span class="p">,</span><span class="n">playerOne</span><span class="p">())</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Player one won with a score of 6
+Player two lost with a score of 3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Extra-Credit">
+<a class="anchor" href="#Extra-Credit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extra Credit<a class="anchor-link" href="#Extra-Credit"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+
+<span class="n">direction</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"up"</span><span class="p">,</span> <span class="s2">"down"</span><span class="p">,</span> <span class="s2">"left"</span><span class="p">,</span> <span class="s2">"right"</span><span class="p">]</span>
+<span class="n">itemDirection</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">direction</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Initial direction of the robot: </span><span class="si">{</span><span class="n">itemDirection</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span> 
+
+<span class="n">startNumber</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Where the robot started: </span><span class="si">{</span><span class="n">startNumber</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="n">goalPosition</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
+   <span class="n">r</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="n">startNumber</span><span class="p">:</span>
+      <span class="n">goalPosition</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The goal position is: </span><span class="si">{</span><span class="n">goalPosition</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="n">obstacles</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>
+   <span class="n">r</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">25</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="n">startNumber</span><span class="p">:</span>
+      <span class="n">obstacles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">r</span> <span class="o">!=</span> <span class="n">goalPosition</span><span class="p">:</span>
+      <span class="n">obstacles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">r</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">obstacles</span><span class="p">:</span>
+      <span class="n">obstacles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The goal position is: </span><span class="si">{</span><span class="n">obstacles</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1">## I tried to make it so the program wouldn't repeat the same number twice and it worked but it doubles the number.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Initial direction of the robot: ['down']
+Where the robot started: 11
+The goal position is: [16]
+The goal position is: [21, 21, 7, 7, 13, 13, 5, 5, 8, 8, 11, 15, 15, 10, 10, 17, 17, 16, 16, 3, 3, 19, 19]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
