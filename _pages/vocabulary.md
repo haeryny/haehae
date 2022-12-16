@@ -17,6 +17,17 @@ a { color: rgb(255,255, 255) !important; }
 
 - boolean- value that is either true or false
 
+- ASCII- is a character encoding standard for electronic communication. 
+
+- Unicode- is an information technology standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems.
+
+- Data Compression- is the process of encoding, restructuring or otherwise modifying data in order to reduce its size.
+
+- Lossy- in which unnecessary information is discarded.
+
+- Lossless- is a class of data compression algorithms that allows the original data to be perfectly reconstructed from the compressed data.
+
+
 # Unit 3 Algorithm/Programming Terms
 
 - variables- A variable is an abstraction inside a program that can hold a value. Each variable has associated data storage that represents one value at a time, but that value can be a list or other collection that in turn contains multiple values. Using meaningful variable names helps with readability of program code and understanding of what values are represented by the variables. Some programming languages provide types to represent data, which are referenced using variables.
@@ -80,4 +91,6 @@ MOD represent the Modulus operator. Returns the value after division: a MOD b
 - parameters- Parameters are the variables that appear between the brackets in the "def" line of a Python function definition.
 
 - procedural abstraction- One good use of a procedure is to eliminate duplicate code. In addition to improving the readability of the app, the use of a procedure will make it easier to modify that chunk of code because it only occurs once in the program. Use of parameters and complexity.
+
+- python def procedures- A procedure allows us to group a block of code under a name, known as a procedure name.
 
