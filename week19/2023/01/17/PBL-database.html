@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Database/Model, Backend, OOP, Python | haeryn yu</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Database/Model, Backend, OOP, Python" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The project-based learning objective is to create a purposeful backend, something that can’t be done in frontend via JavaScript. A database and storing persistent data is a primary focus of most backend systems. An SQLite Database using the Python SQLAlchemy framework will be the outcome of this lesson. As students learn databases using SQLAlchemy, they will also learn about Object-oriented programming in Python." />
+<meta property="og:description" content="The project-based learning objective is to create a purposeful backend, something that can’t be done in frontend via JavaScript. A database and storing persistent data is a primary focus of most backend systems. An SQLite Database using the Python SQLAlchemy framework will be the outcome of this lesson. As students learn databases using SQLAlchemy, they will also learn about Object-oriented programming in Python." />
+<link rel="canonical" href="https://haeryny.github.io/haehae/week19/2023/01/17/PBL-database.html" />
+<meta property="og:url" content="https://haeryny.github.io/haehae/week19/2023/01/17/PBL-database.html" />
+<meta property="og:site_name" content="haeryn yu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-01-17T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Database/Model, Backend, OOP, Python" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-17T00:00:00-06:00","datePublished":"2023-01-17T00:00:00-06:00","description":"The project-based learning objective is to create a purposeful backend, something that can’t be done in frontend via JavaScript. A database and storing persistent data is a primary focus of most backend systems. An SQLite Database using the Python SQLAlchemy framework will be the outcome of this lesson. As students learn databases using SQLAlchemy, they will also learn about Object-oriented programming in Python.","headline":"Database/Model, Backend, OOP, Python","mainEntityOfPage":{"@type":"WebPage","@id":"https://haeryny.github.io/haehae/week19/2023/01/17/PBL-database.html"},"url":"https://haeryny.github.io/haehae/week19/2023/01/17/PBL-database.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/haehae/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://haeryny.github.io/haehae/feed.xml" title="haeryn yu" /><link rel="shortcut icon" type="image/x-icon" href="/haehae/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/haehae/">haeryn yu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/haehae/about/">About Me</a><a class="page-link" href="/haehae/search/">Search</a><a class="page-link" href="/haehae/categories/">Tags</a><a class="page-link" href="/haehae/vocab/">Vocabulary</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Database/Model, Backend, OOP, Python</h1><p class="page-description">The project-based learning objective is to create a purposeful backend, something that can't be done in frontend via JavaScript.  A database and storing persistent data is a primary focus of most backend systems.  An SQLite Database using the Python SQLAlchemy framework will be the outcome of this lesson.  As students learn databases using SQLAlchemy, they will also learn about Object-oriented programming in Python.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-01-17T00:00:00-06:00" itemprop="datePublished">
+        Jan 17, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      5 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/haehae/categories/#week19">week19</a>
+        
+      
+      </p>
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Database-and-Table-Terms">Database and Table Terms </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Reference">Reference </a></li>
+<li class="toc-entry toc-h3"><a href="#Outline-for-Backend-Model-and-Database">Outline for Backend Model and Database </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#User-Table-Schema">User Table Schema </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
+<li class="toc-entry toc-h2"><a href="#Hack-Helper">Hack Helper </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-01-17-PBL-database.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Database-and-Table-Terms">
+<a class="anchor" href="#Database-and-Table-Terms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Database and Table Terms<a class="anchor-link" href="#Database-and-Table-Terms"> </a>
+</h2>
+<blockquote>
+<p>The foundations of database is defining one or more <strong><em>Tables</em></strong>.  In Python, a database can be constructed using the foundations we learned in modeling a Class.</p>
+<ul>
+<li>A "Table" is a Model/Schema within a Database.  </li>
+<li>A "Table" definition in Python/SQLAlchemy is manifested by defining a "<strong><em>Class</em></strong>" and "<strong><em>Attributes</em></strong>" in Python.  </li>
+<li>A Python <strong><em>Class can inherit database functionality</em></strong> from SQLAlchemy.  This is a method Python developers use to turn a Class into a Table within a <strong><em>SQL Database</em></strong>.</li>
+<li>Writing methods in the Class for Create, Read, Update, Delete (<strong><em>CRUD</em></strong>) is how a developer initiates database operations.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Reference">
+<a class="anchor" href="#Reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reference<a class="anchor-link" href="#Reference"> </a>
+</h3>
+<ul>
+<li><a href="https://www.sqlalchemy.org/">SQLAlchemy</a></li>
+<li><a href="https://www.ffnext.io/blog/python-backend-with-flask-for-beginners#:~:text=You%20can%20create%20an%20HTTP,command%3A%20python%20app.py.">Python Backend with Flask, SQLite</a></li>
+<li><a href="https://www.ffnext.io/blog/python-backend-with-flask-for-beginners#:~:text=You%20can%20create%20an%20HTTP,command%3A%20python%20app.py.">Python Backend starting Controller</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Outline-for-Backend-Model-and-Database">
+<a class="anchor" href="#Outline-for-Backend-Model-and-Database" aria-hidden="true"><span class="octicon octicon-link"></span></a>Outline for Backend Model and Database<a class="anchor-link" href="#Outline-for-Backend-Model-and-Database"> </a>
+</h3>
+<blockquote>
+<p><strong><em>OOP modeling with SQLAlchemy</em></strong> enables CRUD operations.</p>
+</blockquote>
+<ol>
+<li><a href="https://github.com/nighthawkcoders/flask_portfolio/blob/main/model/users.py#L72-L80">Users Table Schema</a></li>
+<li>
+<p><a href="https://github.com/nighthawkcoders/flask_portfolio/blob/main/model/users.py#L72-L80">Database Properties</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nighthawkcoders/flask_portfolio/blob/main/main.py#L38-L41">Initial Database Setup (call)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nighthawkcoders/flask_portfolio/blob/main/main.py#L38-L41">Initial Database Setup (add records)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nighthawkcoders/flask_portfolio/blob/main/model/users.py#L72-L80">OOP CRUD operations</a></p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="User-Table-Schema">
+<a class="anchor" href="#User-Table-Schema" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Table Schema<a class="anchor-link" href="#User-Table-Schema"> </a>
+</h4>
+<blockquote>
+<p>The db.Model is inherited into the <code>class User(db.model)</code>, Each <code>db.Column</code> is provided properties according to capabilities of SQL.  See <strong>init</strong>.py for db object definition.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="sd">""" database dependencies to support sqliteDB examples """</span>
+
+<span class="kn">from</span> <span class="nn">__init__</span> <span class="kn">import</span> <span class="n">app</span><span class="p">,</span> <span class="n">db</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">IntegrityError</span>
+<span class="kn">from</span> <span class="nn">werkzeug.security</span> <span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span> <span class="n">check_password_hash</span>
+
+
+<span class="sd">""" Key additions to User Class for Schema definition """</span>
+
+<span class="c1"># Define the User class to manage actions in the 'users' table</span>
+<span class="c1"># -- Object Relational Mapping (ORM) is the key concept of SQLAlchemy</span>
+<span class="c1"># -- a.) db.Model is like an inner layer of the onion in ORM</span>
+<span class="c1"># -- b.) User represents data we want to store, something that is built on db.Model</span>
+<span class="c1"># -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL</span>
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'users'</span>  <span class="c1"># table name is plural, class name is singular</span>
+
+    <span class="c1"># Define the User schema with "vars" from object</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">_name</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_uid</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_password</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_dob</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Date</span><span class="p">)</span>
+
+    <span class="c1"># Defines a relationship between User record and Notes table, one-to-many (one user to many notes)</span>
+    <span class="n">posts</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">relationship</span><span class="p">(</span><span class="s2">"Post"</span><span class="p">,</span> <span class="n">cascade</span><span class="o">=</span><span class="s1">'all, delete'</span><span class="p">,</span> <span class="n">backref</span><span class="o">=</span><span class="s1">'users'</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># constructor of a User object, initializes the instance variables within object (self)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">"123qwerty"</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>    <span class="c1"># variables with self prefix become part of the object, </span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_uid</span> <span class="o">=</span> <span class="n">uid</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_dob</span> <span class="o">=</span> <span class="n">dob</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># creates a person object from User(db.Model) class, passes initializers</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>  <span class="c1"># add prepares to persist person object to Users table</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>  <span class="c1"># SqlAlchemy "unit of work pattern" requires a manual commit</span>
+        <span class="k">return</span> <span class="bp">self</span>
+    <span class="k">except</span> <span class="n">IntegrityError</span><span class="p">:</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+<span class="c1"># CRUD read converts self to dictionary</span>
+<span class="c1"># returns dictionary</span>
+<span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
+        <span class="s2">"name"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="s2">"uid"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span>
+        <span class="s2">"dob"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">dob</span><span class="p">,</span>
+        <span class="s2">"age"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span>
+        <span class="s2">"posts"</span><span class="p">:</span> <span class="p">[</span><span class="n">post</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">post</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">posts</span><span class="p">]</span>
+    <span class="p">}</span>
+
+<span class="c1"># CRUD update: updates user name, password, phone</span>
+<span class="c1"># returns self</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
+    <span class="sd">"""only updates values with length"""</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">uid</span> <span class="o">=</span> <span class="n">uid</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="bp">self</span>
+
+<span class="c1"># CRUD delete: remove self</span>
+<span class="c1"># None</span>
+<span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Sean Y'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'yeung'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123yeung'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">1995</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="s1">'10 feet'</span><span class="p">)</span>
+    <span class="n">u2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Ellie P'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'ellie'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123ellie'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="s1">'10 feet'</span><span class="p">)</span>
+    <span class="n">u3</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Kaylee H'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'kaylee'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123kaylee'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="s1">'10 feet'</span><span class="p">)</span>
+    <span class="n">u4</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Theo H'</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s1">'theo'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'123theo'</span><span class="p">,</span> <span class="n">dob</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2006</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">31</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="s1">'10 feet'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Dictionary"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">flask_login</span> <span class="kn">import</span> <span class="n">LoginManager</span>
+<span class="kn">from</span> <span class="nn">flask_sqlalchemy</span> <span class="kn">import</span> <span class="n">SQLAlchemy</span>
+<span class="kn">from</span> <span class="nn">flask_migrate</span> <span class="kn">import</span> <span class="n">Migrate</span>
+
+<span class="sd">"""</span>
+<span class="sd">These object can be used throughout project.</span>
+<span class="sd">1.) Objects from this file can be included in many blueprints</span>
+<span class="sd">2.) Isolating these object definitions avoids duplication and circular dependencies</span>
+<span class="sd">"""</span>
+
+<span class="c1"># Setup of key Flask object (app)</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="c1"># Setup SQLAlchemy object and properties for the database (db)</span>
+<span class="n">dbURI</span> <span class="o">=</span> <span class="s1">'sqlite:////volumes/flask_portfolio.db'</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_TRACK_MODIFICATIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SQLALCHEMY_DATABASE_URI'</span><span class="p">]</span> <span class="o">=</span> <span class="n">dbURI</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'SECRET_KEY'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'SECRET_KEY'</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">SQLAlchemy</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+<span class="n">Migrate</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">db</span><span class="p">)</span>
+
+<span class="c1"># Images storage</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'MAX_CONTENT_LENGTH'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span>  <span class="c1"># maximum size of uploaded content</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'UPLOAD_EXTENSIONS'</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'.jpg'</span><span class="p">,</span> <span class="s1">'.png'</span><span class="p">,</span> <span class="s1">'.gif'</span><span class="p">]</span>  <span class="c1"># supported file types</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">'UPLOAD_FOLDER'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'volumes/uploads/'</span>  <span class="c1"># location of user uploaded content</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+<blockquote>
+<p>The <strong><em>Big Picture</em></strong> purpose of this hack is to build a database.  Being able to create an SQLite table and populate test data within it is the major goal.  To do this effectively it is imperative to show the following.</p>
+<ol>
+<li>Build Schema for a table, make a new <code>model</code> file and use <code>users.py</code> as an example. Start slow and simple and build up.</li>
+<li>Build an <code>initXXXXX()</code> method and use it to add preliminary/test data to the table.  Once again use users.py as an example.</li>
+<li>Make a 30-60 second video where you show a Debugging session of making new rows in the table. Use <code>sqlite</code> marketplace tools and/or sqlite3 command line tool to show success in creating table and adding data.</li>
+</ol>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hack-Helper">
+<a class="anchor" href="#Hack-Helper" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack Helper<a class="anchor-link" href="#Hack-Helper"> </a>
+</h2>
+<blockquote>
+<p>Here are some tips.</p>
+</blockquote>
+<ul>
+<li>
+<p>Become familiar with <code>initUsers()</code>.  Observe it is called/activated from <code>main.py</code>.  This function activates after you run the <code>main.py</code> and activate the web application in the browser.  Observe that the <code>sqlite.db</code> file will appear in the volumes directory in conjunction with home screen of site appearing in browser.</p>
+</li>
+<li>
+<p>Delete sqlite.db from volumes directory on your development machine.  Set <code>breakpoint</code> on initUsers() and run <code>main.py using debug</code>.  Use the step into option on the debugger and observe the creation of data.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">before_first_request</span>
+<span class="k">def</span> <span class="nf">activate_job</span><span class="p">():</span><span class="n">initJokes</span><span class="p">()</span>    <span class="n">initUsers</span><span class="p">()</span>
+</pre></div>
+<ul>
+<li>
+<p>Make your own <code>XXXXX.py</code> file under <code>model</code> directory.  Follow <code>users.py</code> and develop your own schema from the OOP code you did in last Hacks.  Follow the pattern in <code>users.py</code> to make a initXXXX() function top populate some test data.</p>
+</li>
+<li>
+<p>In <code>main.py</code>, add your initXXXX() method to <code>def activate_job()</code> function shown above.  Use this as basis of your video debugging session.  Debugging is hugely important at this level to understand your database success prior to building an API.  Building initXXXX() method, adding database records, and debugging will enable you to verify CRUD operations as you develop.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/haehae/week19/2023/01/17/PBL-database.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/haehae/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://haeryny.github.io/haehae/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/haehae/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My Blogs for Trimester 2</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/nighthawkcoders “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://twitter.com/NighthawkCoding “" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
