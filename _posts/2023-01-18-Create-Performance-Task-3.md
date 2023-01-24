@@ -1,4 +1,20 @@
-c
+---
+toc: true
+layout: post
+categories: [week18]
+title: Create Performance Task 3
+---
+## Student 1
+
+| Reporting Catergory          | Student Score | College Board Score | Comments |
+|------------------------------|---------------|---------------------|----------|
+| Program Purpose and Function |      1        |        1            |The response earned the point for this row, meeting all six criteria and demonstrates the running of the program, showing input into the program. This is a perfect example on how to earn this point. |
+| Data Abstraction             |      0        |        0            |I agree with collegeboard that this did not earn a point because it does not show all the code in an efficient manner and it is a good reminder to display my code well. |
+| Managing Complexity          |      1        |        0            |I thought that this deserved a point because it had a lot of complexity despite the way collegeboard thinks.|
+| Procedural Abstraction       |      0        |        0            |I agree with collegeboard because it does explicitly explain why this doesn't work and does not specify how the procedure contributes to the overall program, only stating that it “allows for the program to execute smoothly.”|
+| Algorithm Implementation     |      1        |        1            |Good example of showing this part of the category. |
+| Testing                      |      1        |        1            |I agree with colleboard that the testing was done in an efficient manner.|
+
 
 ## Student 2
 
