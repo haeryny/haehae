@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit 2.2 Data Compression Notes | haeryn yu</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit 2.2 Data Compression Notes" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My Blogs for Trimester 2" />
+<meta property="og:description" content="My Blogs for Trimester 2" />
+<link rel="canonical" href="https://haeryny.github.io/haehae/2023/03/07/2.2-Data-Compression-Notes.html" />
+<meta property="og:url" content="https://haeryny.github.io/haehae/2023/03/07/2.2-Data-Compression-Notes.html" />
+<meta property="og:site_name" content="haeryn yu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-07T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unit 2.2 Data Compression Notes" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-07T00:00:00-06:00","datePublished":"2023-03-07T00:00:00-06:00","description":"My Blogs for Trimester 2","headline":"Unit 2.2 Data Compression Notes","mainEntityOfPage":{"@type":"WebPage","@id":"https://haeryny.github.io/haehae/2023/03/07/2.2-Data-Compression-Notes.html"},"url":"https://haeryny.github.io/haehae/2023/03/07/2.2-Data-Compression-Notes.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/haehae/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://haeryny.github.io/haehae/feed.xml" title="haeryn yu" /><link rel="shortcut icon" type="image/x-icon" href="/haehae/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/haehae/">haeryn yu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/haehae/about/">About Me</a><a class="page-link" href="/haehae/search/">Search</a><a class="page-link" href="/haehae/categories/">Tags</a><a class="page-link" href="/haehae/vocab/">Vocabulary</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit 2.2 Data Compression Notes</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-07T00:00:00-06:00" itemprop="datePublished">
+        Mar 7, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/haeryny/haehae/tree/master/_notebooks/2023-03-07-2.2-Data-Compression-Notes.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/haehae/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/haeryny/haehae/master?filepath=_notebooks%2F2023-03-07-2.2-Data-Compression-Notes.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/haehae/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/haeryny/haehae/blob/master/_notebooks/2023-03-07-2.2-Data-Compression-Notes.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/haehae/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fhaeryny%2Fhaehae%2Fblob%2Fmaster%2F_notebooks%2F2023-03-07-2.2-Data-Compression-Notes.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/haehae/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#AP-PREP">AP PREP </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Data-Compression">Data Compression </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Lossless-Data">Lossless Data </a></li>
+<li class="toc-entry toc-h3"><a href="#Lossy-Data">Lossy Data </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Collegeboard-Quiz">Collegeboard Quiz </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Images">Images </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Project-Addition">Project Addition </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-07-2.2-Data-Compression-Notes.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="AP-PREP">
+<a class="anchor" href="#AP-PREP" aria-hidden="true"><span class="octicon octicon-link"></span></a>AP PREP<a class="anchor-link" href="#AP-PREP"> </a>
+</h1>
+<h2 id="Data-Compression">
+<a class="anchor" href="#Data-Compression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Compression<a class="anchor-link" href="#Data-Compression"> </a>
+</h2>
+<ul>
+<li>Data compression can reduce the size of transmitted or stored data and the fewer the bits does not mean that there is less information. <ul>
+<li>The amount of size reduction from compression depends on both the amount of redundancy in the original data representation and the compression algorithm applied. </li>
+</ul>
+</li>
+</ul>
+<h3 id="Lossless-Data">
+<a class="anchor" href="#Lossless-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lossless Data<a class="anchor-link" href="#Lossless-Data"> </a>
+</h3>
+<p>Lossless data compression algorithms can usually reduce the number of bits stored or transmitted while guaranteeing complete recontrstuction of the original data.</p>
+<ul>
+<li>In situations where quality or ability to reconstruct the original is maximally important, lossless is better</li>
+<li>It reduces the number of bits stored or transmitted while guaranteeing  complete reconstruction of the original data</li>
+</ul>
+<h3 id="Lossy-Data">
+<a class="anchor" href="#Lossy-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lossy Data<a class="anchor-link" href="#Lossy-Data"> </a>
+</h3>
+<p>Lossy data compression algorithms can significantly reduce the number of bits stored or transmitted but only allow reconstruction of an approximation of the original data</p>
+<ul>
+<li>In situations where minimizing data size or transmission time is maximally important, lossy is better</li>
+<li>It significantly reduces the number of bits stored or transmitted but only allow reconstruction of an approximation of the original data</li>
+</ul>
+<h4 id="Collegeboard-Quiz">
+<a class="anchor" href="#Collegeboard-Quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collegeboard Quiz<a class="anchor-link" href="#Collegeboard-Quiz"> </a>
+</h4>
+<p><img src="https://user-images.githubusercontent.com/111464920/223863684-4f94a8f0-307b-4c35-bf47-f931b719c24e.png" alt="image"></p>
+<ol>
+<li>Which of the following is an advantage of a lossless compression algorithm over a lossy compression algorithm?</li>
+</ol>
+<p><strong>Answer: B</strong> A lossless compression algorithm can guarantee reconstruction of original data, while a lossy compression algorithm cannot.</p>
+<p>Explanation: Lossless compression algorithms are guaranteed to be able to reconstruct the original data, while lossy compression algorithms are not.</p>
+<ol>
+<li>A user wants to save a data file on an online storage site. The user wants to reduce the size of the file, if possible, and wants to be able to completely restore the file to its original version. Which of the following actions best supports the user’s needs?</li>
+</ol>
+<p><strong>Answer: A</strong> Compressing the file using a lossless compression algorithm before uploading it.</p>
+<p>Explanation: Lossless compression algorithms allow for complete reconstruction of the original data and typically reduce the size of the data.</p>
+<ol>
+<li>A programmer is developing software for a social media platform. The programmer is planning to use compression when users send attachments to other users. Which of the following is a true statement about the use of compression?</li>
+</ol>
+<p><strong>Answer: C</strong> Lossy compression of an image file generally provides a greater reduction in transmission time than lossless compression does.</p>
+<p>Explanation: Although fewer bits may be stored, information is not necessarily lost when lossy compression is applied to an image.</p>
+<h2 id="Images">
+<a class="anchor" href="#Images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Images<a class="anchor-link" href="#Images"> </a>
+</h2>
+<p><img src="https://user-images.githubusercontent.com/111464920/223864494-19f64e3b-2250-4342-8e8c-d00ab13748b6.jpg" alt="jpeg-home"></p>
+<p>This is a jpeg image and this is good for lossy algorithm. The compression is applied to the actual pixel data. That data can't be magically reconstructed when the image is opened again. In other words, compression will permanently reduce the quality of a JPEG image. This is why JPEG compression is referred to as “lossy” compression.</p>
+<p><img src="https://user-images.githubusercontent.com/111464920/223864852-a6ef8320-ee73-4a85-a48f-40dfff4a570b.png" alt="png-transparent-two-checked-flags-racing-flags-auto-racing-racing-flag-miscellaneous-game-flag-png-free-download"></p>
+<p>This is a png image and this is good for lossless algorithm because the image data can be compressed without losing any information. This is different from other compression formats, such as JPEG, which use a lossy compression algorithm that discards some of the image data to achieve a smaller file size.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Project-Addition">
+<a class="anchor" href="#Project-Addition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project Addition<a class="anchor-link" href="#Project-Addition"> </a>
+</h1>
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/haehae/2023/03/07/2.2-Data-Compression-Notes.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/haehae/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://haeryny.github.io/haehae/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/haehae/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My Blogs for Trimester 2</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/nighthawkcoders “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://twitter.com/NighthawkCoding “" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
