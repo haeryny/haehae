@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      9 min read
     
 </span></p>
 
@@ -257,10 +257,30 @@ window.onload = wrap_img;
 <p>Uses SQL SELECT statement to read data</p>
 </blockquote>
 <ul>
-<li>What is a connection object?  After you google it, what do you think it does?</li>
-<li>Same for cursor object?</li>
-<li>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?</li>
-<li>Is "results" an object?  How do you know?</li>
+<li>
+<p>What is a connection object?  After you google it, what do you think it does?</p>
+<blockquote>
+<p>A connection object is an instance of a class in a programming language that represents a connection to a database or a network resource. It is typically used to execute queries, transactions, and other operations on the database or resource.</p>
+</blockquote>
+</li>
+<li>
+<p>Same for cursor object?</p>
+<blockquote>
+<p>A cursor object is an instance of a class in a programming language that is used to traverse and manipulate the records returned from a database query. In other words, it is a mechanism for iterating over the result set of a database query and processing the individual rows returned.</p>
+</blockquote>
+</li>
+<li>
+<p>Look at conn object and cursor object in VSCode debugger.  What attributes are in the object?</p>
+<blockquote>
+<p>The attributes in the conn and cursor objects in a VSCode debugger session depend on the specific type of object being used, as well as the database driver being used to connect to the database. The conn object has a database, host, port, user, password, autocommit, isolation_level, closed. The cursor object</p>
+</blockquote>
+</li>
+<li>
+<p>Is "results" an object?  How do you know?</p>
+<blockquote>
+<p>"Results" can be an object in certain contexts, but it depends on the specific context in which the term is being used. In general, an object is a data structure that stores data and provides methods for accessing and manipulating that data. Depending on the context, "results" could refer to a specific data structure that stores the outcome of a computation or experiment, such as the results of a scientific study or the results of a search query on a website.</p>
+</blockquote>
+</li>
 </ul>
 
 </div>
@@ -314,8 +334,9 @@ window.onload = wrap_img;
 (3, 'Alexander Graham Bell', 'lex', 'sha256$zjCcOdS8mDSbVxVG$42130b9517c0424a1d65cd0a2608ee404f308a5c62d5d226294c2807a7cbc557', '2023-03-15')
 (4, 'Eli Whitney', 'whit', 'sha256$DQwoCCCv4qqyGUMS$009c668366039f21d8d05944c0020a5b417f4587172a96201593886adad67e1f', '2023-03-15')
 (5, 'Indiana Jones', 'indi', 'sha256$6t67LoVg2Qy2hLNT$edb03fa214deb5544181cfb29e930f02f5828eb370ba3bedd41ef1037d38b134', '1920-10-21')
-(6, 'Marion Ravenwood', 'raven', 'sha256$8WBsKfu4klCzJSWO$fd58a67ee1b8a2ed8b23d10835e1168a283b5c79354bbe28d6e002d98def670b', '1921-10-21')
+(6, 'Marion Ravenwood', 'raven', 'gothackednewpassword123', '1921-10-21')
 (7, 'Haeryn Yu', 'haeryn', '1234', '2007-04-29')
+(8, 'Bob Ross', 'bob', '14444444444444', '1946-10-29')
 </pre>
 </div>
 </div>
@@ -412,12 +433,27 @@ window.onload = wrap_img;
 </h2>
 <blockquote>
 <p>Uses SQL UPDATE to modify password</p>
-<ul>
-<li>What does the hacked part do?</li>
-<li>Explain try/except, when would except occur?</li>
-<li>What code seems to be repeated in each of these examples to point, why is it repeated?</li>
-</ul>
 </blockquote>
+<ul>
+<li>
+<p>What does the hacked part do?</p>
+<blockquote>
+<p>It checks if how long the password is and if it is shorter than two digits that means it is easier to hack so that is why for security to see if your password can get hacked.</p>
+</blockquote>
+</li>
+<li>
+<p>Explain try/except, when would except occur?</p>
+<blockquote>
+<p>try and except are keywords used in Python programming language to handle exceptions, which are unexpected errors that occur during the execution of a program. The try block contains the code that may raise an exception, and the except block contains the code that handles the exception if it is raised.</p>
+</blockquote>
+</li>
+<li>
+<p>What code seems to be repeated in each of these examples to point, why is it repeated?</p>
+<blockquote>
+<p>It is repeated because users are recursive.</p>
+</blockquote>
+</li>
+</ul>
 
 </div>
 </div>
@@ -476,7 +512,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>The row with user id haeryn the password has been successfully updated
+<pre>No uid haeyrn was not found in the table
 </pre>
 </div>
 </div>
@@ -495,11 +531,18 @@ window.onload = wrap_img;
 </h2>
 <blockquote>
 <p>Uses a delete function to remove a user based on a user input of the id.</p>
-<ul>
-<li>Is DELETE a dangerous operation?  Why?</li>
-<li>In the print statemements, what is the "f" and what does {uid} do?</li>
-</ul>
 </blockquote>
+<ul>
+<li>
+<p>Is DELETE a dangerous operation?  Why?</p>
+<blockquote>
+<p>It is a dangerous operation because the try block contains the code that may raise an exception, and the except block contains the code that handles the exception if it is raised.</p>
+</blockquote>
+</li>
+<li>
+<p>In the print statemements, what is the "f" and what does {uid} do?</p>
+</li>
+</ul>
 
 </div>
 </div>
