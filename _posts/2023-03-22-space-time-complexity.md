@@ -111,3 +111,26 @@ Types Of Time Complexity:
 2. Average Time Complexity: In the average case take all random inputs and calculate the computation time for all inputs. And then we divide it by the total number of inputs.
 3. Worst Time Complexity: Define the input for which algorithm takes a long time or maximum time. In the worst calculate the upper bound of an algorithm. Example: In the linear search when search data is present at the last location of large data then the worst case occurs.
 
+### Types of Sorting Algorithms
+
+Sorting algorithms are methods used to organize data in a specific order. There are many types of sorting algorithms, each with its own time complexity. Here are some of the most common sorting algorithms and their time complexity:
+
+|Types of Sorting Algorithms| Definition| Time Complexity|
+|---------------------------|-----------|----------------|
+|Bubble Sort                | Bubble Sort is a simple sorting algorithm that compares adjacent elements and swaps them if they are in the wrong order| The time complexity of Bubble Sort is O(n^2)|
+|Selection Sort             | Selection Sort sorts an array by repeatedly finding the minimum element from the unsorted part of the array and putting it at the beginning| The time complexity of Selection Sort is O(n^2)|
+|Insertion Sort             | Insertion Sort builds the final sorted array one item at a time. It works by comparing each element in the array to the elements before it and inserting it into the correct position| The time complexity of Insertion Sort is O(n^2)|
+|Quick Sort                 | Quick Sort is a divide-and-conquer algorithm that works by selecting a "pivot" element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively| The time complexity of Quick Sort is O(n log n)|
+|Merge Sort                 | Merge Sort is also a divide-and-conquer algorithm that works by dividing the array into two halves, sorting each half, and then merging the two halves back together| The time complexity of Merge Sort is O(n log n)|
+|Heap Sort                  | Heap Sort is a comparison-based sorting algorithm that works by turning the array into a binary heap, and then repeatedly extracting the largest element from the heap and placing it at the end of the array| The time complexity of Heap Sort is O(n log n)|
+
+Overall, the choice of sorting algorithm depends on the specific requirements of the problem at hand, including the size of the data set, the range of the values, and the desired efficiency of the algorithm.
+
+## Hacks Questions
+
+1. Why is time and space complexity important when choosing an algorithm?
+> Time and space complexity are important when choosing an algorithm because they determine how much time and memory an algorithm will require to solve a problem. An algorithm that is efficient in terms of time and space complexity will be faster and require less memory than an algorithm that is not efficient, making it a better choice for solving larger problems or problems that need to be solved quickly. If the algorithm doesn't work, this is bad from both the perspective of a programmer and of a consumer. A consumer does not want to work with a laggy, slow program that fails to account for large amounts of data and programmers will find it difficult to work around processing algorithms that are very time-consuming.
+2. Should you always use a constant time algorithm / Should you never use an exponential time algorithm? Explain? 
+> No, you should not always use a constant time algorithm or never use an exponential time algorithm. The choice of algorithm depends on the specific problem being solved and the trade-offs between time and space complexity. In some cases, a constant time algorithm may not be able to solve the problem efficiently, while in other cases, an exponential time algorithm may be the only practical solution. It is important to consider the constraints and requirements of the problem at hand when choosing an algorithm.
+3. What are some general patterns that you noticed to determine each algorithm's time and space complexity?
+> Some general patterns to determine time and space complexity are analyzing loops, recursive functions, and nested data structures. For time complexity, counting the number of operations executed by an algorithm related to/caused by the input size is often used to determine time complexity. For space complexity, analyzing the amount of memory required to store data as a function of the input size is often used to determine space complexity.
