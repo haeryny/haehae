@@ -7,6 +7,7 @@ title: Plans for CPT Project
 
 ## CPT Grading
 Overall Score: 3/6
+
 | Reporting Category          | Student Score  |Peer Score| Comments |
 |------------------------------|----------------|----|------|
 | Program Purpose and Function |      1         |  1  |The response earned the point for this row, meeting all six criteria and demonstrates the running of the program, showing input into the program. |
