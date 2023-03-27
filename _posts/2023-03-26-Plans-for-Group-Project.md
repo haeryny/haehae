@@ -9,12 +9,12 @@ title: Plans for CPT Project
 Overall Score: 3/6
 | Reporting Category          | Student Score  |Peer Score| Comments |
 |------------------------------|----------------|----|------|
-| Program Purpose and Function |      1         |  1|The response earned the point for this row, meeting all six criteria and demonstrates the running of the program, showing input into the program. |
-| Data Abstraction             |      1         |    1 | I believe that the code had showed how the data was use efficiently and meets all the requirements |
-| Managing Complexity          |      0        |  0 |I need more complexity|
-| Procedural Abstraction       |      0        |0|The video does not show how the procedure works, but the writeup does.|
-| Algorithm Implementation     |      0        |0|It doesn't shows the algorithm used for the code |
-| Testing                      |      1        |1|The testing did meet all the requirements|
+| Program Purpose and Function |      1         |  1  |The response earned the point for this row, meeting all six criteria and demonstrates the running of the program, showing input into the program. |
+| Data Abstraction             |      1         |  1  | I believe that the code had showed how the data was use efficiently and meets all the requirements |
+| Managing Complexity          |      0         |   0 |I need more complexity|
+| Procedural Abstraction       |      0         |0    |The video does not show how the procedure works, but the writeup does.|
+| Algorithm Implementation     |      0         |0    |It doesn't shows the algorithm used for the code |
+| Testing                      |      1         |1    |The testing did meet all the requirements|
 
 This is the score I recieved when I did the cpt review at the end of trimester 2. I want to improve my complexity, procedural abstraction and algorithm implementation. All these three will be improved by adding a new database to the class feature, which will increase the complexity, abstraction and the algorithms that I use. 
 
