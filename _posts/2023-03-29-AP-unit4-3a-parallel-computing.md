@@ -1,12 +1,8 @@
 ---
 keywords: fastai
-description: Observe an algorithm using parallel computing in Python Code.  Monitor processes on host.
 title: Unit 4.3a Parallel Computing
 toc: true
-image: /images/python.png
 categories: []
-type: ap
-week: 28
 nb_path: _notebooks/2023-03-29-AP-unit4-3a-parallel-computing.ipynb
 layout: notebook
 ---
