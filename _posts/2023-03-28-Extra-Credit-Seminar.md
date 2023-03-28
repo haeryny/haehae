@@ -19,7 +19,7 @@ CSUSM has multiple pathways and offer phsyics, engineering, computer science, ma
 
 There are many events and clubs.
 - Hackathon, women in stem, society of phsyics, robotics, computer science club`
-> CSUSM offers internship opportunities that can last from two weeks to two years. To join these internships, students should try to attend on-campus experiences and joining clubs. 
+> CSUSM offers internship opportunities that can last from two weeks to two years. To join these internships, students should try to attend on-campus experiences and joining clubs. These internships can be paid for and also are offered experience. 
 
 #### Mechanical Engineering Program
 
