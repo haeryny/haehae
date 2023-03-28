@@ -1,6 +1,6 @@
 ---
 title: Panel Notes Extra Credit
-layout: default
+layout: base
 description: 
 tags: [extraCredit]
 ---

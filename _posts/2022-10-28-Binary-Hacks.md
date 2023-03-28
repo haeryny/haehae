@@ -1,6 +1,6 @@
 ---
 title: Binary Hacks
-layout: default
+layout: base
 description: Hacks and Notes for Binary Math
 tags: [week1]
 ---
