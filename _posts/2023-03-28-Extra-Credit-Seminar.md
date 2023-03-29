@@ -35,4 +35,6 @@ The program also offers opportunities for students to gain hands-on experience t
 - The program also provides resources for students, such as the Computer Science Club, which offers events, workshops, and networking opportunities for students interested in computer science.
 - CSUSM also has a Center for Research and Innovation in Science Education (CRISE) which supports research in STEM education, including computer science education.
 
+![image1 (3)](https://user-images.githubusercontent.com/111464920/228657159-7303377d-236c-4603-b3a0-2f140f2adcfe.jpeg)
+![image0 (3)](https://user-images.githubusercontent.com/111464920/228657199-080756bc-cc53-4d9e-8fac-2e8fe2b88378.jpeg)
 
