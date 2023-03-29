@@ -25,7 +25,7 @@ There are many events and clubs.
 
 This program is the most famous program in CSUSM as many people who go here, recieve their masters after completing their undergraduate years. 
 
-#### Computer Science Program
+### Computer Science Program
 
 The Computer Science (CS) program at CSUSM offers Bachelor of Science (BS) and Master of Science (MS) degrees in Computer Science. The CS program at CSUSM is accredited by the Accreditation Board for Engineering and Technology (ABET), which is a recognized standard for the quality of CS programs.
 - The program provides students with a strong foundation in computer science, programming, and problem-solving skills.
@@ -34,3 +34,5 @@ The Computer Science (CS) program at CSUSM offers Bachelor of Science (BS) and M
 The program also offers opportunities for students to gain hands-on experience through internships, research projects, and industry collaborations. CSUSM has partnerships with local industries, such as ViaSat and Qualcomm, to provide students with real-world experiences and job opportunities. The CS program at CSUSM has a diverse faculty with research interests in areas such as computer vision, machine learning, natural language processing, and cybersecurity.
 - The program also provides resources for students, such as the Computer Science Club, which offers events, workshops, and networking opportunities for students interested in computer science.
 - CSUSM also has a Center for Research and Innovation in Science Education (CRISE) which supports research in STEM education, including computer science education.
+
+
