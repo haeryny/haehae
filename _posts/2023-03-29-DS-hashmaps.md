@@ -289,10 +289,7 @@ layout: notebook
 </ul>
 </li>
 <li>Expand upon the code given to you, possible improvements in comments</li>
-<li><p>Build your own album showing features of a python dictionary</p>
-</li>
-<li><p>For Mr. Yeung's class: Justify your favorite Taylor Swift song, answer may effect seed</p>
-</li>
+<li>Build your own album showing features of a python dictionary</li>
 </ul>
 
 </div>
