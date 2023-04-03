@@ -18,21 +18,6 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Create a diagram or comparison illustration (Canva).<ul>
-<li>What are the pro and cons of using this data structure? </li>
-<li>Dictionary vs List    </li>
-</ul>
-</li>
-<li>Expand upon the code given to you, possible improvements in comments</li>
-<li>Build your own album showing features of a python dictionary</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Diagram">Diagram<a class="anchor-link" href="#Diagram"> </a></h2><p><img src="https://user-images.githubusercontent.com/111464920/229386962-5c39b3e7-3572-491b-b394-1bcdcddc78b5.png" alt="image"></p>
 
 </div>
