@@ -20,7 +20,7 @@ layout: notebook
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="AP-Classroom">AP Classroom<a class="anchor-link" href="#AP-Classroom"> </a></h3><blockquote><p>AP Classroom. Provide answers and thoughts on theoritical question form college board Video in section 4.3.  They start at about the 9 minute mark.</p>
 </blockquote>
-<h4 id="Example-1">Example 1<a class="anchor-link" href="#Example-1"> </a></h4><p>A particular computer has two identical processors which can run in parallel. Each Process must be executed on a single processor and each processor can only run one process at a time.</p>
+<h3 id="Example-1">Example 1<a class="anchor-link" href="#Example-1"> </a></h3><p>A particular computer has two identical processors which can run in parallel. Each Process must be executed on a single processor and each processor can only run one process at a time.</p>
 <p>The table below lists the amount of time it takes to execute each of the processes on a single computer. None of the processes are dependent on any of the others.</p>
 <p>What is the minimum amount of time to execute all three processes when the two processors are run in parallel?</p>
 <table>
@@ -46,7 +46,7 @@ layout: notebook
 </table>
 <h4 id="Answer-1">Answer 1<a class="anchor-link" href="#Answer-1"> </a></h4><p>50 seconds</p>
 <p>If we run the processes sequentially on a single processor, it will take a total of 50 + 10 + 30 = 90 seconds. However, we have two identical processors available, so we can run two processes in parallel. The bottleneck process will be the one with the longest execution time, which is process X with 50 seconds. The other two processes can be completed in the remaining time it takes to complete process X. So, we can run processes Y and Z simultaneously on the two processors, which will take a total of 30 seconds (since Z takes 30 seconds to execute). Once process Z is complete, we can use one processor to complete process X, which will take another 20 seconds. Therefore, the total time required to complete all three processes using both processors is 20 + 30 = 50 seconds. Thus, the minimum amount of time required to execute all three processes when the two processors are run in parallel is 50 seconds.</p>
-<h4 id="Example-2">Example 2<a class="anchor-link" href="#Example-2"> </a></h4><p>A computer has two duplicate processors that are able to run in parallel. The table below shows the amount of time it takes each processor to execute each of two processes. Neither process is dependent on the other.</p>
+<h3 id="Example-2">Example 2<a class="anchor-link" href="#Example-2"> </a></h3><p>A computer has two duplicate processors that are able to run in parallel. The table below shows the amount of time it takes each processor to execute each of two processes. Neither process is dependent on the other.</p>
 <table>
 <thead><tr>
 <th>Process</th>
