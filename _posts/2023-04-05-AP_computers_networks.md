@@ -3,11 +3,7 @@ toc: true
 comments: true
 layout: post
 title: Computers and Networks (Unit 4)
-description: Add Definitions from Unit 4 Computer Systems and Networks
-image: /images/apcsp.png
 categories: []
-type: ap
-week: 29
 ---
 
 ## Requirements
@@ -18,10 +14,10 @@ week: 29
 > As we have learned, a computer needs aa program to do something smart.  The sequence of a program initiates a series of actions with the computers Central Processing Unit (CPU). This component is essentially a binary machine focussing on program instructions provided.  The CPU retrieives and stores the data it acts upon in Random Access Memory (RAM). Between the CPU, RAM, and Storage Devices a computer can work with many programs and large amounts of data.
 
 List specification of your Computer, or Computers if working as Pair/Trio
-- Processor GHz: 
-- Memory in GB:
-- Storage in GB:
-- OS:
+- Processor GHz: Processor Intel(R) Core(TM) i7-3517U CPU @ 1.90GHz, 2401 Mhz, 2 Core(s), 4 Logical Processor(s)
+- Memory in GB: 8.00 GB
+- Storage in GB: 143 GB
+- OS: 22621.1555 Windows 11
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
 - Input devices
@@ -162,3 +158,78 @@ result = ray.get(part1_result) + ray.get(part2_result)
 print(result)
 
 ```
+
+## College Board Daily Video 4.1.2
+
+The internet is computer network consisting of interconnected networks that use standardized, open communication protocols. Access to the interenet depends on the ability to connect a computing device to an internet connected device. 
+- A protocol is an agreed-upon set of rules that specify the behavior of a system. 
+- The protocols used in the Internet are open, which allows users to easily connect additional computing devices to the internet
+- Routing on the internet is usually dynamic; it is not specified in advance
+
+The scalability of a system is the capacity for the system to change in size and scale to meet new demands. The internet was designed to be scalable. 
+
+A packet is a small amount of data sent over a network. Each packet also includes the source and the destination information. A protocol is an agreed-upon set of rules that specify the behavior of a system. 
+
+#### Computer Protocol Models
+1. OSI - Open Systems Interconnect
+> The layers you have to go through to communicate. The 7 group of protocols are Physical, Data Link, Network, Transport, Session, Presentation, Application. 
+
+2. IETF - Internet Engineering Task Force
+> Manages the development of standards and technical discussions concerning the internet in an open and collaborative process. 
+
+3. TCP - Transmission Control Protocol 
+> Establishes a common standard for how to send messages between devices on the internet. 
+
+There are many different protocols, standards, data formats, etc. Used at the "Application" and "Transport" layers. There are many different protocols and hardware used at the Network Access Layer. Ethernet, WIFI, Cable, Fiber Optics. They meet in the middle at the "Internet" layer where you use Internet Protocol Addresses. IP Adressing is the common link, and relatively simple. 
+
+Internet Engineering Task Force (IETF) - Manages the development of internet standards via written techinical discussions in an open and collaborative process. 
+
+#### Network Access Layer
+- Putting and pulling the 1's and 0's from a wire or radio wave. This layer is focused on the hardware and protocols that carry 0's and 1's between two devices. 
+
+The most common Network Access Protocol is Ethernet, implemented in Network Interface Cards (NIC). A general function of the physical layer is to deliver packets from one NIC to another. This is reffered to as a "hop". 
+- Each NIC has a unique address associated with it called a Media Access Control (MAC) Address. It is used for local hops.
+> Data Link, Fiber, MAC, Ethernet, NIC, Wire
+
+#### Network Access/Internet Layer Data Transmission 
+A packet contains data that is being transmitted as well as metadata containing information used for routing information. 
+
+Internet Layer - The internet was designed to be scalable-able to change in size and scale to meet new demands. 
+
+#### The Scalability of the Internet 
+Local Area Network (LAN) - Physical connections limited by hardware and physics. 
+
+Autonomous Systems (AS) - Large intranets linked together under the control and policies of major organizations. Large routers link networks with large telecommunications connections
+
+The Internet - Autonomous Systems (AS) Linked Together as large routers linking via Telecom Means (Fiber, T3, Satellites) or Major Infrastructure - DNS (.com, .net, .etc), Cyber Operations
+
+#### Transport Layer
+Open standards and protocols enable different manufactures and develoers to build hardware and software that can communicate with hardware and software on the rest of the internet. 
+- Different Types of Protocols
+    - TCP does error checking and error recovery so it is slower
+        > Slower but reliable, Three-way Handshake, Typical Applications are Email and Web-browsing.
+    - UDP performs error checking, but it discards erroneous packets. 
+        > Fast but does not guarantee transfers, best effort, Typical Applications are Music Streaming and VolP
+
+### Review
+
+1. Open standards and protocols enable different manufactureres and developers to build hardware and software that can communicate with hardware and software on the rest of the internet
+> True
+
+2. IETF is a task force used to enforce laws to keep manufacturers out of the internet
+> False
+
+3. Routes are determined in advanced and are not flexible.
+> False
+
+4. A protocol is an agreed-upon set of rules that specify the behavior of a system
+> True 
+
+5. UDP guarantees transfers and is faster.
+> False
+
+6. The World Wide Web is the internet
+> False 
+
+7. HTTP is a protocol used by the World Wide Web. 
+> True
