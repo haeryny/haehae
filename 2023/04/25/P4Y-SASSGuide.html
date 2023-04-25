@@ -4,22 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>P4-Y 4/25 Guide to SASS | haeryn yu</title>
+<title>Guide to SASS Hacks | haeryn yu</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="P4-Y 4/25 Guide to SASS" />
-<meta name="author" content="Aniket Chakradeo, Ryan Hakimipour, Max Tullius, Jaden Nguyen, Nathan Kim, Kalani Cabral-Omana, Evan Appari, Max Wu," />
+<meta property="og:title" content="Guide to SASS Hacks" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An guide on how to use SASS to build a more customized frontend." />
-<meta property="og:description" content="An guide on how to use SASS to build a more customized frontend." />
-<link rel="canonical" href="https://haeryny.github.io/haehae/student/2023/04/25/P4Y-SASSGuide.html" />
-<meta property="og:url" content="https://haeryny.github.io/haehae/student/2023/04/25/P4Y-SASSGuide.html" />
+<meta name="description" content="My Blogs for Trimester 2" />
+<meta property="og:description" content="My Blogs for Trimester 2" />
+<link rel="canonical" href="https://haeryny.github.io/haehae/2023/04/25/P4Y-SASSGuide.html" />
+<meta property="og:url" content="https://haeryny.github.io/haehae/2023/04/25/P4Y-SASSGuide.html" />
 <meta property="og:site_name" content="haeryn yu" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-04-25T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="P4-Y 4/25 Guide to SASS" />
+<meta property="twitter:title" content="Guide to SASS Hacks" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aniket Chakradeo, Ryan Hakimipour, Max Tullius, Jaden Nguyen, Nathan Kim, Kalani Cabral-Omana, Evan Appari, Max Wu,"},"dateModified":"2023-04-25T00:00:00-05:00","datePublished":"2023-04-25T00:00:00-05:00","description":"An guide on how to use SASS to build a more customized frontend.","headline":"P4-Y 4/25 Guide to SASS","mainEntityOfPage":{"@type":"WebPage","@id":"https://haeryny.github.io/haehae/student/2023/04/25/P4Y-SASSGuide.html"},"url":"https://haeryny.github.io/haehae/student/2023/04/25/P4Y-SASSGuide.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-25T00:00:00-05:00","datePublished":"2023-04-25T00:00:00-05:00","description":"My Blogs for Trimester 2","headline":"Guide to SASS Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://haeryny.github.io/haehae/2023/04/25/P4Y-SASSGuide.html"},"url":"https://haeryny.github.io/haehae/2023/04/25/P4Y-SASSGuide.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/haehae/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://haeryny.github.io/haehae/feed.xml" title="haeryn yu" /><link rel="shortcut icon" type="image/x-icon" href="/haehae/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -74,11 +73,9 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">P4-Y 4/25 Guide to SASS</h1><p class="page-description">An guide on how to use SASS to build a more customized frontend.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-25T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Guide to SASS Hacks</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-25T00:00:00-05:00" itemprop="datePublished">
         Apr 25, 2023
-      </time>• 
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">Aniket Chakradeo, Ryan Hakimipour, Max Tullius, Jaden Nguyen, Nathan Kim, Kalani Cabral-Omana, Evan Appari, Max Wu,</span></span>
+      </time>
        • <span class="read-time" title="Estimated read time">
     
     
@@ -87,31 +84,23 @@ window.onload = wrap_img;
 </span></p>
 
     
-      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      
-        <a class="category-tags-link" href="/haehae/categories/#student">student</a>
-        
-      
-      </p>
-    
 
     
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#WGET-this-file-and-complete-fully-and-thoroughly-in-order-to-be-receive-credit">WGET this file and complete fully and thoroughly in order to be receive credit </a>
-<ul>
-<li class="toc-entry toc-h2"><a href="#Team-Lesson-Plan:">Team Lesson Plan: </a></li>
-</ul>
-</li>
 <li class="toc-entry toc-h1"><a href="#Classwork:">Classwork: </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#What-are-5-Basic-UI-Elements?:">What are 5 Basic UI Elements?: </a></li>
 <li class="toc-entry toc-h3"><a href="#In-your-own-words,-explain-what-SASS-does:">In your own words, explain what SASS does: </a></li>
+<li class="toc-entry toc-h3"><a href="#What-are-some-benefits-to-SASS?:">What are some benefits to SASS?: </a></li>
 <li class="toc-entry toc-h3"><a href="#Describe/Explain-one-of-the-more-"advanced"-SASS-properties-below-in-detail:">Describe/Explain one of the more &quot;advanced&quot; SASS properties below in detail: </a></li>
+<li class="toc-entry toc-h2"><a href="#Link-to-Number-Guesser-Game">Link to Number Guesser Game </a>
+<ul>
 <li class="toc-entry toc-h3"><a href="#How-does-the-number-guesser-game-work?">How does the number guesser game work? </a></li>
-<li class="toc-entry toc-h3"><a href="#Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?">Explain how SASS can be used to make the number guesser game look more visually appealing? </a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Hacks---Insert-any-screenshots,-code-segments,-etc.-that-you-need-to-in-order-to-demonstrate-an-understanding-of-the-hacks">Hacks - Insert any screenshots, code segments, etc. that you need to in order to demonstrate an understanding of the hacks </a>
@@ -122,7 +111,9 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Copy-and-paste-the-following-code-segment-into-a-markdown-file-which-will-be-used-for-the-hacks:">Copy and paste the following code segment into a markdown file which will be used for the hacks: </a></li>
-</ul><!--
+<li class="toc-entry toc-h1"><a href="#guess-the-number">Guess the Number</a></li>
+</ul><body>
+<!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -134,46 +125,6 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="WGET-this-file-and-complete-fully-and-thoroughly-in-order-to-be-receive-credit">
-<a class="anchor" href="#WGET-this-file-and-complete-fully-and-thoroughly-in-order-to-be-receive-credit" aria-hidden="true"><span class="octicon octicon-link"></span></a>WGET this file and complete fully and thoroughly in order to be receive credit<a class="anchor-link" href="#WGET-this-file-and-complete-fully-and-thoroughly-in-order-to-be-receive-credit"> </a>
-</h1>
-<p><a href="https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/2023-04-25-P4Y-SASSGuide.ipynb">Wget Link</a></p>
-<h2 id="Team-Lesson-Plan:">
-<a class="anchor" href="#Team-Lesson-Plan:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Team Lesson Plan:<a class="anchor-link" href="#Team-Lesson-Plan:"> </a>
-</h2>
-<p>SASS Part 1- Nathan, Aniket, Kalani</p>
-<ul>
-<li>Basic UI Properties and what they mean</li>
-<li>Color properties</li>
-<li>Themes</li>
-<li>SASS Definition/What it is useful for</li>
-<li>SASS code segments w/ comparison to css</li>
-<li>Demonstration of SASS</li>
-</ul>
-<p>SASS Part 2- Max W, Evan</p>
-<ul>
-<li>More UI Properties</li>
-<li>UX</li>
-<li>Layouts</li>
-<li>Animation/animation code for UI</li>
-</ul>
-<p>Building JavaScript Game or Application- Ryan, Jaden</p>
-<ul>
-<li>Before vs After Minesweeper Game - how to customize </li>
-<li>Building a java script game and what it requires</li>
-</ul>
-<p>Hacks Page - Kalani, Max T</p>
-<ul>
-<li>Students must create their own hack (simple app,game, etc using key components from the lesson) </li>
-<li>Make sure the students can wget the file so they can work on it for their hacks</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Classwork:">
 <a class="anchor" href="#Classwork:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classwork:<a class="anchor-link" href="#Classwork:"> </a>
 </h1>
@@ -181,36 +132,42 @@ window.onload = wrap_img;
 <a class="anchor" href="#What-are-5-Basic-UI-Elements?:" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are 5 Basic UI Elements?:<a class="anchor-link" href="#What-are-5-Basic-UI-Elements?:"> </a>
 </h3>
 <ol>
-<li>2.
-3.</li>
-<li>
-<li>
+<li>Color </li>
+<li>Font</li>
+<li>Layout</li>
+<li>Icons</li>
+<li>Accesibility</li>
 </ol>
 <h3 id="In-your-own-words,-explain-what-SASS-does:">
 <a class="anchor" href="#In-your-own-words,-explain-what-SASS-does:" aria-hidden="true"><span class="octicon octicon-link"></span></a>In your own words, explain what SASS does:<a class="anchor-link" href="#In-your-own-words,-explain-what-SASS-does:"> </a>
 </h3>
 <ul>
-<li>
-<p>### What are some benefits to SASS?:</p>
-</li>
-<li>
+<li>SASS is an extension of CSS which can be used to create and style parts of your website. It helps improve the complexity of your page by putting all your styles into specific styles where you are able to style your website.</li>
+</ul>
+<h3 id="What-are-some-benefits-to-SASS?:">
+<a class="anchor" href="#What-are-some-benefits-to-SASS?:" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are some benefits to SASS?:<a class="anchor-link" href="#What-are-some-benefits-to-SASS?:"> </a>
+</h3>
+<ul>
+<li>SASS has variables that we can not use in CSS. They also have builtin features and reduces complexity in code.</li>
 </ul>
 <h3 id='Describe/Explain-one-of-the-more-"advanced"-SASS-properties-below-in-detail:'>
 <a class="anchor" href="#Describe/Explain-one-of-the-more-" advanced aria-hidden="true"><span class="octicon octicon-link"></span></a>Describe/Explain one of the more "advanced" SASS properties below in detail:<a class="anchor-link" href="#Describe/Explain-one-of-the-more-%22advanced%22-SASS-properties-below-in-detail:"> </a>
 </h3>
 <ul>
-<li>
-<p>## <a href="https://anicricket.github.io/tmv4/_pages/numberguesser_v3.html">Link to Number Guesser Game</a></p>
-</li>
+<li>The variable property that is part of the "advanced" SASS properties help with the overall complexity with your program. You can create variables with the dollar signs and you are able to reduce the complexities. They are easy to communicate with and can be used easily. These variables help with all the code as you are able to reference it in different parts of your SASS and you do not have to write the color over and over again.</li>
 </ul>
+<h2 id="Link-to-Number-Guesser-Game">
+<a class="anchor" href="#Link-to-Number-Guesser-Game" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://anicricket.github.io/tmv4/_pages/numberguesser_v3.html">Link to Number Guesser Game</a><a class="anchor-link" href="#Link-to-Number-Guesser-Game"> </a>
+</h2>
 <h3 id="How-does-the-number-guesser-game-work?">
 <a class="anchor" href="#How-does-the-number-guesser-game-work?" aria-hidden="true"><span class="octicon octicon-link"></span></a>How does the number guesser game work?<a class="anchor-link" href="#How-does-the-number-guesser-game-work?"> </a>
 </h3>
-<p>-</p>
-<h3 id="Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?">
-<a class="anchor" href="#Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explain how SASS can be used to make the number guesser game look more visually appealing?<a class="anchor-link" href="#Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?"> </a>
-</h3>
-<p>-</p>
+<ul>
+<li>
+<p>### Explain how SASS can be used to make the number guesser game look more visually appealing?</p>
+</li>
+<li>
+</ul>
 
 </div>
 </div>
@@ -251,61 +208,52 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Guess</span> <span class="n">the</span> <span class="n">Number</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Guess</span> <span class="n">the</span> <span class="n">Number</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Try</span> <span class="n">to</span> <span class="n">guess</span> <span class="n">the</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mf">100.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">"text"</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"guess"</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">"Enter your guess"</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">button</span> <span class="n">onclick</span><span class="o">=</span><span class="s2">"checkGuess()"</span><span class="o">&gt;</span><span class="n">Submit</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">p</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"result"</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<div class="text_cell_render border-box-sizing rendered_html">
 
-  <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
-    <span class="o">//</span> <span class="n">Generate</span> <span class="n">a</span> <span class="n">random</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">100</span>
-    <span class="n">const</span> <span class="n">randomNumber</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">let</span> <span class="n">attempts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
-    <span class="n">function</span> <span class="n">checkGuess</span><span class="p">()</span> <span class="p">{</span>
-      <span class="o">//</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">user</span><span class="s1">'s guess</span>
-      <span class="n">const</span> <span class="n">guess</span> <span class="o">=</span> <span class="n">parseInt</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"guess"</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">);</span>
+  <title>Guess the Number</title>
 
-      <span class="o">//</span> <span class="n">Increase</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">attempts</span>
-      <span class="n">attempts</span><span class="o">++</span><span class="p">;</span>
 
-      <span class="o">//</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">the</span> <span class="n">guess</span> <span class="ow">is</span> <span class="n">correct</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">guess</span> <span class="o">===</span> <span class="n">randomNumber</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="err">`</span><span class="n">Congratulations</span><span class="err">!</span> <span class="n">You</span> <span class="n">guessed</span> <span class="n">the</span> <span class="n">number</span> <span class="ow">in</span> <span class="err">$</span><span class="p">{</span><span class="n">attempts</span><span class="p">}</span> <span class="n">attempts</span><span class="o">.</span><span class="err">`</span><span class="p">;</span>
-      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">guess</span> <span class="o">&lt;</span> <span class="n">randomNumber</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="s2">"Too low. Guess again."</span><span class="p">;</span>
-      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">"result"</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="s2">"Too high. Guess again."</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
-</pre></div>
+  <h1>
+<a class="anchor" href="#guess-the-number" aria-hidden="true"><span class="octicon octicon-link"></span></a>Guess the Number</h1>
+  <p>Try to guess the number between 1 and 100.</p>
+  <input type="text" id="guess" placeholder="Enter your guess">
+  <button onclick="checkGuess()">Submit</button>
+  <p id="result"></p>
 
-    </div>
+  <script>
+    // Generate a random number between 1 and 100
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      // Get the user's guess
+      const guess = parseInt(document.getElementById("guess").value);
+
+      // Increase the number of attempts
+      attempts++;
+
+      // Check if the guess is correct
+      if (guess === randomNumber) {
+        document.getElementById("result").innerHTML = `Congratulations! You guessed the number in ${attempts} attempts.`;
+      } else if (guess < randomNumber) {
+        document.getElementById("result").innerHTML = "Too low. Guess again.";
+      } else {
+        document.getElementById("result").innerHTML = "Too high. Guess again.";
+      }
+    }
+  </script>
+
+
+</div>
+</div>
 </div>
 </div>
 
-</div>
-    
 
-</div>
-
-
-
+</body>
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
         repo="haeryny/haehae"
@@ -314,7 +262,7 @@ window.onload = wrap_img;
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/haehae/student/2023/04/25/P4Y-SASSGuide.html" hidden></a>
+</script><a class="u-url" href="/haehae/2023/04/25/P4Y-SASSGuide.html" hidden></a>
 </article>
 
       </div>
