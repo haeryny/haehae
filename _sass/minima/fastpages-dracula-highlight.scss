@@ -1,9 +1,9 @@
 // Override Syntax Highlighting In Minima With the Dracula Theme: https://draculatheme.com/
 // If you wish to override any of this CSS, do so in _sass/minima/custom-styles.css
  
-$dt-gray-dark: #282a36;  // Background
+$dt-gray-dark: #f4af3f;  // Background
 $dt-code-cell-background: #323443;
-$dt-gray: #44475a;       // Current Line & Selection
+$dt-gray: #f6b138;       // Current Line & Selection
 $dt-gray-light: #f8f8f2; // Foreground
 $dt-blue: #6272a4;       // Comment
 $dt-cyan: #8be9fd;
@@ -16,7 +16,7 @@ $dt-yellow: #f1fa8c;
 $dt-green-light: rgb(172, 229, 145);
 
 .language-python + .language-plaintext {
-    border-left: 1px solid grey;
+    border-left: 1px solid rgb(246, 149, 46);
     margin-left: 1rem !important;
 }
 
@@ -37,7 +37,7 @@ $dt-green-light: rgb(172, 229, 145);
     margin-top:1.5rem !important;
     padding-bottom:0 !important;
     padding-top:0 !important;
-    background: #323443 !important;
+    background: #f3a831 !important;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-family: Menlo, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, monospace;
@@ -54,7 +54,7 @@ $dt-green-light: rgb(172, 229, 145);
     border-left: 1px solid lightcoral;
 }
 .output_area pre {
-    border-left: 1px solid grey;
+    border-left: 1px solid rgb(248, 175, 39);
     margin-left: 1rem !important;
     font-size: 16px;
 }
@@ -152,7 +152,7 @@ $dt-green-light: rgb(172, 229, 145);
     }
 
     .c1 {
-      color: gray;
+      color: rgb(247, 167, 40);
     }
   
     .kd,

@@ -18,7 +18,7 @@ img.emoji{
   text-align: center;
   font-size: .8rem;
   font-style: italic;
-  color: light-grey;
+  color: orange;
 }
 
 .page-content {
@@ -30,7 +30,7 @@ img.emoji{
 // make non-headings slightly lighter
 .post-content p, .post-content li {
    font-size: 20px;
-   color: #515151;
+   color: #f8a232;
 }
 
 .post-link{
@@ -76,7 +76,7 @@ li {
   margin-bottom:.05rem !important;
   }
   .post-meta-description {
-    color: rgb(88, 88, 88);
+    color: rgb(242, 143, 30);
     font-size: 15px;
     margin-top:.05rem !important;
     margin-bottom:.05rem !important;
@@ -153,7 +153,7 @@ h6:hover .anchor-link {
 .page-description {
   margin-top: .5rem !important;
   margin-bottom: .5rem !important;
-  color: #585858;
+  color: #ef9024;
   font-size: 115%;
 }
 
@@ -213,10 +213,10 @@ table {
 }
 ::-webkit-scrollbar-thumb {
   height: 6px;
-  border: 4px solid rgba(0, 0, 0, 0);
+  border: 4px solid rgb(241, 149, 35);
   background-clip: padding-box;
   -webkit-border-radius: 7px;
-  background-color: #9D9D9D;
+  background-color: #faa92f;
   -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
 }
 ::-webkit-scrollbar-button {

@@ -36,9 +36,10 @@ layout: notebook
 <li>The variable property that is part of the "advanced" SASS properties help with the overall complexity with your program. You can create variables with the dollar signs and you are able to reduce the complexities. They are easy to communicate with and can be used easily. These variables help with all the code as you are able to reference it in different parts of your SASS and you do not have to write the color over and over again.</li>
 </ul>
 <h2 id="Link-to-Number-Guesser-Game"><a href="https://anicricket.github.io/tmv4/_pages/numberguesser_v3.html">Link to Number Guesser Game</a><a class="anchor-link" href="#Link-to-Number-Guesser-Game"> </a></h2><h3 id="How-does-the-number-guesser-game-work?">How does the number guesser game work?<a class="anchor-link" href="#How-does-the-number-guesser-game-work?"> </a></h3><ul>
-<li><p>### Explain how SASS can be used to make the number guesser game look more visually appealing?</p>
-</li>
-<li></li>
+<li>The number guesser game chooses a number between one through hundred and based on the user's input, the program will ouput one out of three options. The program will say either the number is too high, too low, or is correct. They track how many inputs the user made before they guessed the correct number. </li>
+</ul>
+<h3 id="Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?">Explain how SASS can be used to make the number guesser game look more visually appealing?<a class="anchor-link" href="#Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?"> </a></h3><ul>
+<li>SASS changed the color scheme and the font. It would give the user a more satisfactory exeperience as it is easier to navigate and aesthetically pleasing to look at. The colors are bright and helps increase the user's mood and be more engaging to the program, making the overall game better than it was before.</li>
 </ul>
 
 </div>
@@ -47,7 +48,10 @@ layout: notebook
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Hacks---Insert-any-screenshots,-code-segments,-etc.-that-you-need-to-in-order-to-demonstrate-an-understanding-of-the-hacks">Hacks - Insert any screenshots, code segments, etc. that you need to in order to demonstrate an understanding of the hacks<a class="anchor-link" href="#Hacks---Insert-any-screenshots,-code-segments,-etc.-that-you-need-to-in-order-to-demonstrate-an-understanding-of-the-hacks"> </a></h1><h2 id="Hacks-Part-1">Hacks Part 1<a class="anchor-link" href="#Hacks-Part-1"> </a></h2><ol>
-<li>Add your own element to your own repository to make it unique (0.9)</li>
+<li>Add your own element to your own repository to make it unique (0.9)<blockquote><p>I added an image to my fastpage and also changed the background color and text color to blue and white. I also made the border grey when it was previously green. 
+<img src="https://user-images.githubusercontent.com/111464920/234402206-f19ec8a3-b31f-4358-a2b0-1df9920fb679.png" alt="image"></p>
+</blockquote>
+</li>
 </ol>
 <h2 id="Hacks-Part-2">Hacks Part 2<a class="anchor-link" href="#Hacks-Part-2"> </a></h2><ol>
 <li>Add the style change button to your own github page (0.9)<ul>
@@ -64,10 +68,7 @@ layout: notebook
 <h1 id="Copy-and-paste-the-following-code-segment-into-a-markdown-file-which-will-be-used-for-the-hacks:">Copy and paste the following code segment into a markdown file which will be used for the hacks:<a class="anchor-link" href="#Copy-and-paste-the-following-code-segment-into-a-markdown-file-which-will-be-used-for-the-hacks:"> </a></h1>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<html>
+</div>  <html>
 <head>
   <title>Guess the Number</title>
 </head>
@@ -102,9 +103,6 @@ layout: notebook
   </script>
 </body>
 </html>
-</div>
-</div>
-</div>
 </div>
  
 
