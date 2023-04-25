@@ -1,14 +1,9 @@
 ---
 keywords: fastai
-description: An guide on how to use SASS to build a more customized frontend.
-title: P4-Y 4/25 Guide to SASS 
+title: Guide to SASS Hacks 
 toc: true
 comments: true
 badges: false
-author: Aniket Chakradeo, Ryan Hakimipour, Max Tullius, Jaden Nguyen, Nathan Kim, Kalani Cabral-Omana, Evan Appari, Max Wu, 
-categories: [student]
-type: ap
-week: 31
 nb_path: _notebooks/2023-04-25-P4Y-SASSGuide.ipynb
 layout: notebook
 ---
@@ -24,56 +19,27 @@ layout: notebook
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="WGET-this-file-and-complete-fully-and-thoroughly-in-order-to-be-receive-credit">WGET this file and complete fully and thoroughly in order to be receive credit<a class="anchor-link" href="#WGET-this-file-and-complete-fully-and-thoroughly-in-order-to-be-receive-credit"> </a></h1><p><a href="https://raw.githubusercontent.com/nighthawkcoders/APCSP/master/_notebooks/2023-04-25-P4Y-SASSGuide.ipynb">Wget Link</a></p>
-<h2 id="Team-Lesson-Plan:">Team Lesson Plan:<a class="anchor-link" href="#Team-Lesson-Plan:"> </a></h2><p>SASS Part 1- Nathan, Aniket, Kalani</p>
-<ul>
-<li>Basic UI Properties and what they mean</li>
-<li>Color properties</li>
-<li>Themes</li>
-<li>SASS Definition/What it is useful for</li>
-<li>SASS code segments w/ comparison to css</li>
-<li>Demonstration of SASS</li>
-</ul>
-<p>SASS Part 2- Max W, Evan</p>
-<ul>
-<li>More UI Properties</li>
-<li>UX</li>
-<li>Layouts</li>
-<li>Animation/animation code for UI</li>
-</ul>
-<p>Building JavaScript Game or Application- Ryan, Jaden</p>
-<ul>
-<li>Before vs After Minesweeper Game - how to customize </li>
-<li>Building a java script game and what it requires</li>
-</ul>
-<p>Hacks Page - Kalani, Max T</p>
-<ul>
-<li>Students must create their own hack (simple app,game, etc using key components from the lesson) </li>
-<li>Make sure the students can wget the file so they can work on it for their hacks</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Classwork:">Classwork:<a class="anchor-link" href="#Classwork:"> </a></h1><h3 id="What-are-5-Basic-UI-Elements?:">What are 5 Basic UI Elements?:<a class="anchor-link" href="#What-are-5-Basic-UI-Elements?:"> </a></h3><ol>
-<li>2.
-3.</li>
-<li></li>
-<li></li>
+<li>Color </li>
+<li>Font</li>
+<li>Layout</li>
+<li>Icons</li>
+<li>Accesibility</li>
 </ol>
 <h3 id="In-your-own-words,-explain-what-SASS-does:">In your own words, explain what SASS does:<a class="anchor-link" href="#In-your-own-words,-explain-what-SASS-does:"> </a></h3><ul>
-<li><p>### What are some benefits to SASS?:</p>
+<li>SASS is an extension of CSS which can be used to create and style parts of your website. It helps improve the complexity of your page by putting all your styles into specific styles where you are able to style your website.</li>
+</ul>
+<h3 id="What-are-some-benefits-to-SASS?:">What are some benefits to SASS?:<a class="anchor-link" href="#What-are-some-benefits-to-SASS?:"> </a></h3><ul>
+<li>SASS has variables that we can not use in CSS. They also have builtin features and reduces complexity in code.</li>
+</ul>
+<h3 id="Describe/Explain-one-of-the-more-&quot;advanced&quot;-SASS-properties-below-in-detail:">Describe/Explain one of the more "advanced" SASS properties below in detail:<a class="anchor-link" href="#Describe/Explain-one-of-the-more-&quot;advanced&quot;-SASS-properties-below-in-detail:"> </a></h3><ul>
+<li>The variable property that is part of the "advanced" SASS properties help with the overall complexity with your program. You can create variables with the dollar signs and you are able to reduce the complexities. They are easy to communicate with and can be used easily. These variables help with all the code as you are able to reference it in different parts of your SASS and you do not have to write the color over and over again.</li>
+</ul>
+<h2 id="Link-to-Number-Guesser-Game"><a href="https://anicricket.github.io/tmv4/_pages/numberguesser_v3.html">Link to Number Guesser Game</a><a class="anchor-link" href="#Link-to-Number-Guesser-Game"> </a></h2><h3 id="How-does-the-number-guesser-game-work?">How does the number guesser game work?<a class="anchor-link" href="#How-does-the-number-guesser-game-work?"> </a></h3><ul>
+<li><p>### Explain how SASS can be used to make the number guesser game look more visually appealing?</p>
 </li>
 <li></li>
 </ul>
-<h3 id="Describe/Explain-one-of-the-more-&quot;advanced&quot;-SASS-properties-below-in-detail:">Describe/Explain one of the more "advanced" SASS properties below in detail:<a class="anchor-link" href="#Describe/Explain-one-of-the-more-&quot;advanced&quot;-SASS-properties-below-in-detail:"> </a></h3><ul>
-<li><p>## <a href="https://anicricket.github.io/tmv4/_pages/numberguesser_v3.html">Link to Number Guesser Game</a></p>
-</li>
-</ul>
-<h3 id="How-does-the-number-guesser-game-work?">How does the number guesser game work?<a class="anchor-link" href="#How-does-the-number-guesser-game-work?"> </a></h3><p>-</p>
-<h3 id="Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?">Explain how SASS can be used to make the number guesser game look more visually appealing?<a class="anchor-link" href="#Explain-how-SASS-can-be-used-to-make-the-number-guesser-game-look-more-visually-appealing?"> </a></h3><p>-</p>
 
 </div>
 </div>
@@ -99,57 +65,46 @@ layout: notebook
 </div>
 </div>
 </div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<html>
+<head>
+  <title>Guess the Number</title>
+</head>
+<body>
+  <h1>Guess the Number</h1>
+  <p>Try to guess the number between 1 and 100.</p>
+  <input type="text" id="guess" placeholder="Enter your guess">
+  <button onclick="checkGuess()">Submit</button>
+  <p id="result"></p>
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Guess</span> <span class="n">the</span> <span class="n">Number</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Guess</span> <span class="n">the</span> <span class="n">Number</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">Try</span> <span class="n">to</span> <span class="n">guess</span> <span class="n">the</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mf">100.</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="nb">input</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;guess&quot;</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Enter your guess&quot;</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">button</span> <span class="n">onclick</span><span class="o">=</span><span class="s2">&quot;checkGuess()&quot;</span><span class="o">&gt;</span><span class="n">Submit</span><span class="o">&lt;/</span><span class="n">button</span><span class="o">&gt;</span>
-  <span class="o">&lt;</span><span class="n">p</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;result&quot;</span><span class="o">&gt;&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+  <script>
+    // Generate a random number between 1 and 100
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
 
-  <span class="o">&lt;</span><span class="n">script</span><span class="o">&gt;</span>
-    <span class="o">//</span> <span class="n">Generate</span> <span class="n">a</span> <span class="n">random</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">100</span>
-    <span class="n">const</span> <span class="n">randomNumber</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">Math</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">let</span> <span class="n">attempts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    function checkGuess() {
+      // Get the user's guess
+      const guess = parseInt(document.getElementById("guess").value);
 
-    <span class="n">function</span> <span class="n">checkGuess</span><span class="p">()</span> <span class="p">{</span>
-      <span class="o">//</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">user</span><span class="s1">&#39;s guess</span>
-      <span class="n">const</span> <span class="n">guess</span> <span class="o">=</span> <span class="n">parseInt</span><span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">&quot;guess&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span><span class="p">);</span>
+      // Increase the number of attempts
+      attempts++;
 
-      <span class="o">//</span> <span class="n">Increase</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">attempts</span>
-      <span class="n">attempts</span><span class="o">++</span><span class="p">;</span>
-
-      <span class="o">//</span> <span class="n">Check</span> <span class="k">if</span> <span class="n">the</span> <span class="n">guess</span> <span class="ow">is</span> <span class="n">correct</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">guess</span> <span class="o">===</span> <span class="n">randomNumber</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="err">`</span><span class="n">Congratulations</span><span class="err">!</span> <span class="n">You</span> <span class="n">guessed</span> <span class="n">the</span> <span class="n">number</span> <span class="ow">in</span> <span class="err">$</span><span class="p">{</span><span class="n">attempts</span><span class="p">}</span> <span class="n">attempts</span><span class="o">.</span><span class="err">`</span><span class="p">;</span>
-      <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">guess</span> <span class="o">&lt;</span> <span class="n">randomNumber</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;Too low. Guess again.&quot;</span><span class="p">;</span>
-      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s2">&quot;result&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="s2">&quot;Too high. Guess again.&quot;</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
-<span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
-</pre></div>
-
-    </div>
+      // Check if the guess is correct
+      if (guess === randomNumber) {
+        document.getElementById("result").innerHTML = `Congratulations! You guessed the number in ${attempts} attempts.`;
+      } else if (guess < randomNumber) {
+        document.getElementById("result").innerHTML = "Too low. Guess again.";
+      } else {
+        document.getElementById("result").innerHTML = "Too high. Guess again.";
+      }
+    }
+  </script>
+</body>
+</html>
 </div>
 </div>
-
 </div>
-    {% endraw %}
-
 </div>
  
 
