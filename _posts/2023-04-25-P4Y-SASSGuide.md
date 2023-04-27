@@ -48,11 +48,10 @@ layout: notebook
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Hacks---Insert-any-screenshots,-code-segments,-etc.-that-you-need-to-in-order-to-demonstrate-an-understanding-of-the-hacks">Hacks - Insert any screenshots, code segments, etc. that you need to in order to demonstrate an understanding of the hacks<a class="anchor-link" href="#Hacks---Insert-any-screenshots,-code-segments,-etc.-that-you-need-to-in-order-to-demonstrate-an-understanding-of-the-hacks"> </a></h1><h2 id="Hacks-Part-1">Hacks Part 1<a class="anchor-link" href="#Hacks-Part-1"> </a></h2><ol>
-<li>Add your own element to your own repository to make it unique (0.9)<blockquote><p>I added an image to my fastpage and also changed the background color and text color to blue and white. I also made the border grey when it was previously green. 
-<img src="https://user-images.githubusercontent.com/111464920/234402206-f19ec8a3-b31f-4358-a2b0-1df9920fb679.png" alt="image"></p>
-</blockquote>
-</li>
+<li>Add your own element to your own repository to make it unique (0.9)</li>
 </ol>
+<p>I made the background of my fastpages blue; the test is green and yellow, and I made the sidebar orange.
+<img src="https://user-images.githubusercontent.com/111464920/234405629-c8fd8733-98c1-4691-9c1b-06fbd82bc618.png" alt="image"></p>
 <h2 id="Hacks-Part-2">Hacks Part 2<a class="anchor-link" href="#Hacks-Part-2"> </a></h2><ol>
 <li>Add the style change button to your own github page (0.9)<ul>
 <li>Change the button to your own styles </li>
