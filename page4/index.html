@@ -65,7 +65,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/haehae/about/">About Me</a><a class="page-link" href="/haehae/search/">Search</a><a class="page-link" href="/haehae/categories/">Tags</a><a class="page-link" href="/haehae/vocab/">Vocabulary</a></div>
+        <div class="trigger"><a class="page-link" href="/haehae/about/">About Me</a><a class="page-link" href="/haehae/_pages/game.html">Dog Journal</a><a class="page-link" href="/haehae/search/">Search</a><a class="page-link" href="/haehae/categories/">Tags</a><a class="page-link" href="/haehae/vocab/">Vocabulary</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -73,6 +73,52 @@ window.onload = wrap_img;
         <div class="home"><div>
   <img src="https://user-images.githubusercontent.com/111464920/227629599-2d84089d-f291-484b-98e1-5f89bad7890e.gif" width="500" height="500" style="display: block; margin: 0 auto;" />
 </div>
+
+<p><button onclick="changeStyle()">Change Style</button></p>
+
+<style>
+  /* Style for the button */
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Style for the different stylesheets */
+/* Dark theme */
+.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Light theme */
+.light {
+  background-color: #fff;
+  color: #222;
+}
+
+/* High contrast theme */
+.high-contrast {
+  background-color: #fff;
+  color: #000;
+}
+</style>
+
+<script>
+  function changeStyle() {
+  var element = document.body;
+  element.classList.toggle("dark");
+  element.classList.toggle("light");
+  element.classList.toggle("high-contrast");
+}
+</script>
 
 
 
