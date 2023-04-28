@@ -10,5 +10,48 @@ search_exclude: true
        style="display: block; margin: 0 auto;" />
 </div>
 
+<button onclick="changeStyle()">Change Style</button>
 
+<style>
+  /* Style for the button */
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
+/* Style for the different stylesheets */
+/* Dark theme */
+.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Light theme */
+.light {
+  background-color: #fff;
+  color: #222;
+}
+
+/* High contrast theme */
+.high-contrast {
+  background-color: #fff;
+  color: #000;
+}
+</style>
+
+<script>
+  function changeStyle() {
+  var element = document.body;
+  element.classList.toggle("dark");
+  element.classList.toggle("light");
+  element.classList.toggle("high-contrast");
+}
+</script>
