@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Binary Hacks | haeryn yu</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Binary Hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My Blogs for Trimester 2" />
+<meta property="og:description" content="My Blogs for Trimester 2" />
+<link rel="canonical" href="https://haeryny.github.io/haehae/2023/04/28/Binary-Math-Hacks.html" />
+<meta property="og:url" content="https://haeryny.github.io/haehae/2023/04/28/Binary-Math-Hacks.html" />
+<meta property="og:site_name" content="haeryn yu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-28T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Binary Hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-28T00:00:00-05:00","datePublished":"2023-04-28T00:00:00-05:00","description":"My Blogs for Trimester 2","headline":"Binary Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://haeryny.github.io/haehae/2023/04/28/Binary-Math-Hacks.html"},"url":"https://haeryny.github.io/haehae/2023/04/28/Binary-Math-Hacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/haehae/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://haeryny.github.io/haehae/feed.xml" title="haeryn yu" /><link rel="shortcut icon" type="image/x-icon" href="/haehae/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/haehae/">haeryn yu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/haehae/about/">About Me</a><a class="page-link" href="/haehae/_pages/game.html">Dog Journal</a><a class="page-link" href="/haehae/search/">Search</a><a class="page-link" href="/haehae/categories/">Tags</a><a class="page-link" href="/haehae/vocab/">Vocabulary</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Binary Hacks</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-28T00:00:00-05:00" itemprop="datePublished">
+        Apr 28, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Binary-Math-Hacks">Binary Math Hacks </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Questions">Questions </a></li>
+<li class="toc-entry toc-h3"><a href="#Binary-Table">Binary Table </a></li>
+<li class="toc-entry toc-h3"><a href="#Create-Buttons">Create Buttons </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Binary-Logic-Hacks">Binary Logic Hacks </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Quiz">Quiz </a></li>
+<li class="toc-entry toc-h3"><a href="#Coding-Challenge">Coding Challenge </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Logic-Gates-Hacks">Logic Gates Hacks </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Questions">Questions </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Fetching-Hacks">Fetching Hacks </a></li>
+<li class="toc-entry toc-h2"><a href="#Github-Pages-Hacks">Github Pages Hacks </a></li>
+<li class="toc-entry toc-h2"><a href="#APIs-Hacks">APIs Hacks </a></li>
+<li class="toc-entry toc-h2"><a href="#Data-Compression-Hacks">Data Compression Hacks </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-28-Binary-Math-Hacks.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Binary-Math-Hacks">
+<a class="anchor" href="#Binary-Math-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Math Hacks<a class="anchor-link" href="#Binary-Math-Hacks"> </a>
+</h2>
+<h3 id="Questions">
+<a class="anchor" href="#Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions<a class="anchor-link" href="#Questions"> </a>
+</h3>
+<ol>
+<li>
+<p>How do you think we should find the difference of two binary numbers? The product? The quotient? What rules need to be followed for those operations? Look into all of this on the Internet and note down important information you find?</p>
+<ul>
+<li>To find the difference of two binary numbers, we can use the process of binary subtraction. Binary subtraction is similar to decimal subtraction, except that we use a base of 2 instead of 10. The following rules need to be followed for binary subtraction. For example, if the subtrahend (the number being subtracted) is larger than the minuend (the number being subtracted from), we need to borrow 1 from the next higher bit. Then, To borrow 1 from the next higher bit, we need to subtract 2 from that bit. For example, if we need to borrow 1 from the next higher bit in the number 10011010, we would subtract 2 from the second bit from the left, giving us 01111010. Once we have borrowed 1, we add 2 to the current bit to make up for the borrowed 1. For example, if we need to borrow 1 from the next higher bit in the number 10011010, and we are subtracting 1 from the rightmost bit, we would add 2 to that bit, giving us 1. We continue this process until we have subtracted all the bits in the subtrahend from the minuend.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Binary-Table">
+<a class="anchor" href="#Binary-Table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Table<a class="anchor-link" href="#Binary-Table"> </a>
+</h3>
+<p>Subtracting Binary Numbers Rules</p>
+<table>
+<thead>
+<tr>
+<th>1-1</th>
+<th>1-0</th>
+<th>0-1</th>
+<th>0-0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Multiplying Binary Numbers Rules</p>
+<table>
+<thead>
+<tr>
+<th>1x1</th>
+<th>1x0</th>
+<th>0x1</th>
+<th>0x0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Dividing Binary Numbers Rules
+|1/1|0/1|
+|---|---|
+|1  |0  |</p>
+<h3 id="Create-Buttons">
+<a class="anchor" href="#Create-Buttons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Buttons<a class="anchor-link" href="#Create-Buttons"> </a>
+</h3>
+<label>First binary number:</label>
+<input type="text" id="num1">
+<br>
+<label>Second binary number:</label>
+<input type="text" id="num2">
+<br>
+<button onclick="subtractBinary()">Subtract Binary</button>
+<br>
+<label>Result (binary):</label>
+<input type="text" id="resultBinary" readonly>
+<br>
+<label>Result (decimal):</label>
+<input type="text" id="resultDecimal" readonly>
+<script>
+function subtractBinary() {
+  let num1 = document.getElementById("num1").value;
+  let num2 = document.getElementById("num2").value;
+
+  // Pad the shorter number with leading zeros
+  let maxLength = Math.max(num1.length, num2.length);
+  num1 = num1.padStart(maxLength, "0");
+  num2 = num2.padStart(maxLength, "0");
+
+  let result = "";
+  let borrow = 0;
+
+  for (let i = maxLength - 1; i >= 0; i--) {
+    let bit1 = parseInt(num1.charAt(i));
+    let bit2 = parseInt(num2.charAt(i));
+
+    let difference = bit1 - bit2 - borrow;
+
+    if (difference < 0) {
+      difference += 2;
+      borrow = 1;
+    } else {
+      borrow = 0;
+    }
+
+    result = difference.toString() + result;
+  }
+
+  // Remove leading zeros from the result
+  while (result.charAt(0) === "0" && result.length > 1) {
+    result = result.substr(1);
+  }
+
+  // Set the result in the output fields
+  document.getElementById("resultBinary").value = result;
+
+  let resultDecimal = parseInt(result, 2);
+  document.getElementById("resultDecimal").value = resultDecimal;
+}
+</script>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Binary-Logic-Hacks">
+<a class="anchor" href="#Binary-Logic-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Logic Hacks<a class="anchor-link" href="#Binary-Logic-Hacks"> </a>
+</h2>
+<h3 id="Quiz">
+<a class="anchor" href="#Quiz" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz<a class="anchor-link" href="#Quiz"> </a>
+</h3>
+<p>I needed some time to finish the quiz, and I used the notes as a guide. But I now have a good understanding of binary logic.</p>
+<p><img src="https://user-images.githubusercontent.com/111464920/235281970-f25437eb-da95-4bc5-a283-f3df098cdf41.png" alt="image"></p>
+<h3 id="Coding-Challenge">
+<a class="anchor" href="#Coding-Challenge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coding Challenge<a class="anchor-link" href="#Coding-Challenge"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="c1"># Read the CSV file and extract the data into a list of integers</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'random_numbers_1000.csv'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">files</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">files</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
+
+<span class="c1"># Calculate the mean of the original data</span>
+<span class="n">mean_orig</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Iterate over the data and apply the rules</span>
+<span class="n">num_odds</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">num_odds</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+       <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">2</span>
+
+<span class="c1"># Calculate the mean of the updated data</span>
+<span class="n">mean_updated</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Print the results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Mean of original data: "</span><span class="p">,</span> <span class="n">mean_orig</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Mean of updated data: "</span><span class="p">,</span> <span class="n">mean_updated</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Number of odd elements: "</span><span class="p">,</span> <span class="n">num_odds</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Mean of original data: 63.4
+Mean of updated data: 69.1
+Number of odd elements: 328
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Logic-Gates-Hacks">
+<a class="anchor" href="#Logic-Gates-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logic Gates Hacks<a class="anchor-link" href="#Logic-Gates-Hacks"> </a>
+</h2>
+<h3 id="Questions">
+<a class="anchor" href="#Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions<a class="anchor-link" href="#Questions"> </a>
+</h3>
+<ol>
+<li>
+<p>How can logic gates be used to execute basic computer functions?(1-2 sentences)</p>
+<ul>
+<li>Logic gates can be combined in various ways to perform basic computer functions such as arithmetic, logical operations, and memory storage. These functions are the building blocks of a computer's central processing unit (CPU).</li>
+</ul>
+</li>
+<li>
+<p>What is the difference between boolean operations and logic gates?(1-2 sentences)</p>
+<ul>
+<li>Boolean operations are abstract logical operations performed on Boolean values (True or False) that result in another Boolean value. Logic gates, on the other hand, are physical electronic devices that perform Boolean operations on binary signals (0 or 1) and output a binary signal based on the input signal. While boolean operations are a mathematical abstraction, logic gates are physical devices used in electronic circuits to implement boolean operations.</li>
+</ul>
+</li>
+<li>
+<p>Complete this quiz and correct any mistakes in your blog</p>
+<ul>
+<li><img src="https://user-images.githubusercontent.com/111464920/235283000-e0948655-8cd9-4f3c-a897-b1704f5ceab2.png" alt="image"></li>
+<li>I got the first one wrong which is this one. I misread the question because I thought it was talking about AND and not OR.</li>
+<li><img src="https://user-images.githubusercontent.com/111464920/235283181-0da47784-5e8e-42ad-bd9e-61a1faae3fdc.png" alt="image"></li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fetching-Hacks">
+<a class="anchor" href="#Fetching-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fetching Hacks<a class="anchor-link" href="#Fetching-Hacks"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">const</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">'Alice'</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">27</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">'Bob'</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">32</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">'Charlie'</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">21</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">'David'</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">45</span> <span class="p">}</span>
+<span class="p">];</span>
+
+<span class="o">//</span> <span class="n">Filter</span> <span class="n">data</span> <span class="n">based</span> <span class="n">on</span> <span class="n">age</span> <span class="n">greater</span> <span class="n">than</span> <span class="mi">30</span>
+<span class="n">const</span> <span class="n">filteredData</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">filter</span><span class="p">((</span><span class="n">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">item</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">filteredData</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">Output</span><span class="p">:</span> <span class="p">[{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">'Bob'</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">32</span> <span class="p">},</span> <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">'David'</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">45</span> <span class="p">}]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{ id: 2, name: 'Bob', age: 32 }, { id: 4, name: 'David', age: 45 }
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Github-Pages-Hacks">
+<a class="anchor" href="#Github-Pages-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Github Pages Hacks<a class="anchor-link" href="#Github-Pages-Hacks"> </a>
+</h2>
+<ol>
+<li>Github pages is a hosting service website. Search up another hosting service website other than Github's and write at least one benefit, advantage, or feature at is different from other hosting service websites.<ul>
+<li>One hosting service website that is different from GitHub Pages is Netlify. Netlify is a platform that provides continuous deployment and hosting services for web projects. One of the main advantages of Netlify is that it offers a powerful and flexible build system that allows developers to build, test, and deploy their projects automatically. Netlify also provides features such as forms handling, identity management, and serverless functions, which allow developers to build and deploy dynamic web applications without the need for a separate backend server. Additionally, Netlify provides a global content delivery network (CDN) and SSL encryption by default, ensuring that web applications hosted on the platform are fast, secure, and highly available.</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="APIs-Hacks">
+<a class="anchor" href="#APIs-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>APIs Hacks<a class="anchor-link" href="#APIs-Hacks"> </a>
+</h2>
+<p>Take this python table and use a minimum of 3 pandas functions to analyze the data</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'Name'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Dillon'</span><span class="p">,</span> <span class="s1">'Noor'</span><span class="p">,</span> <span class="s1">'Steven'</span><span class="p">,</span> <span class="s1">'Lucas'</span><span class="p">,</span> <span class="s1">'Harsha'</span><span class="p">,</span> <span class="s1">'Varalu'</span><span class="p">,</span> <span class="s1">'Ryan'</span><span class="p">,</span> <span class="s1">'Emaad'</span><span class="p">],</span>
+    <span class="s1">'Age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+    <span class="s1">'Gender'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'M'</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="s1">'M'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">],</span>
+    <span class="s1">'Grade'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'A'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">,</span> <span class="s1">'D'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'B'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Gender'</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Grade'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     Name  Age Gender Grade
+0  Dillon   24      M     A
+1    Noor   31      M     B
+2  Steven   42      M     A
+3   Lucas   27      M     D
+4  Harsha   29      F     C
+5  Varalu   26      F     F
+6    Ryan   90      F     B
+7   Emaad   15      F     A
+             Age
+count   8.000000
+mean   35.500000
+std    23.268618
+min    15.000000
+25%    25.500000
+50%    28.000000
+75%    33.750000
+max    90.000000
+         Age
+Gender      
+F       40.0
+M       31.0
+A    3
+B    2
+D    1
+C    1
+F    1
+Name: Grade, dtype: int64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Compression-Hacks">
+<a class="anchor" href="#Data-Compression-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Compression Hacks<a class="anchor-link" href="#Data-Compression-Hacks"> </a>
+</h2>
+<p>Lossless compression algorithms typically work by finding patterns in the data and representing them with shorter codes, while ensuring that the compressed data can be perfectly reconstructed back to its original form. Examples of lossless compression algorithms include Huffman coding, Lempel-Ziv-Welch (LZW) compression, and DEFLATE.</p>
+<p>On the other hand, lossy compression algorithms work by permanently discarding some data that is deemed less important or less noticeable to the human eye. This allows for a higher compression ratio, but the reconstructed data will not be exactly the same as the original data. Lossy compression is often used for media files such as images, audio, and video, where small visual or auditory imperfections are generally acceptable. Examples of lossy compression algorithms include JPEG, MP3, and MPEG.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="haeryny/haehae"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/haehae/2023/04/28/Binary-Math-Hacks.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/haehae/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://haeryny.github.io/haehae/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/haehae/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My Blogs for Trimester 2</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/nighthawkcoders “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://twitter.com/NighthawkCoding “" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
