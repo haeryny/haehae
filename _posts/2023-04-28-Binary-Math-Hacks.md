@@ -126,7 +126,8 @@ function subtractBinary() {
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Binary-Logic-Hacks">Binary Logic Hacks<a class="anchor-link" href="#Binary-Logic-Hacks"> </a></h2><h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz"> </a></h3><p><img src="https://user-images.githubusercontent.com/111464920/235281970-f25437eb-da95-4bc5-a283-f3df098cdf41.png" alt="image"></p>
+<h2 id="Binary-Logic-Hacks">Binary Logic Hacks<a class="anchor-link" href="#Binary-Logic-Hacks"> </a></h2><h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz"> </a></h3><p>I needed some time to finish the quiz, and I used the notes as a guide. But I now have a good understanding of binary logic.</p>
+<p><img src="https://user-images.githubusercontent.com/111464920/235281970-f25437eb-da95-4bc5-a283-f3df098cdf41.png" alt="image"></p>
 <h3 id="Coding-Challenge">Coding Challenge<a class="anchor-link" href="#Coding-Challenge"> </a></h3>
 </div>
 </div>
@@ -157,7 +158,7 @@ function subtractBinary() {
         <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="n">num_odds</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">elif</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">2</span>
+       <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*=</span> <span class="mi">2</span>
 
 <span class="c1"># Calculate the mean of the updated data</span>
 <span class="n">mean_updated</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
@@ -177,18 +178,11 @@ function subtractBinary() {
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/haeryny/vscode/haehae/_notebooks/2023-04-28-Binary-Math-Hacks.ipynb Cell 4</span> in <span class="ansi-cyan-fg">&lt;cell line: 5&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/haeryny/vscode/haehae/_notebooks/2023-04-28-Binary-Math-Hacks.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=2&#39;&gt;3&lt;/a&gt;</span> # Read the CSV file and extract the data into a list of integers
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/haeryny/vscode/haehae/_notebooks/2023-04-28-Binary-Math-Hacks.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span> data = []
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/haeryny/vscode/haehae/_notebooks/2023-04-28-Binary-Math-Hacks.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4&#39;&gt;5&lt;/a&gt;</span> with open(&#39;data.csv&#39;, &#39;r&#39;) as files:
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/haeryny/vscode/haehae/_notebooks/2023-04-28-Binary-Math-Hacks.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span>     reader = csv.reader(files)
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/haeryny/vscode/haehae/_notebooks/2023-04-28-Binary-Math-Hacks.ipynb#W4sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>     for row in reader:
-
-<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;data.csv&#39;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Mean of original data: 63.4
+Mean of updated data: 69.1
+Number of odd elements: 328
+</pre>
 </div>
 </div>
 
@@ -198,6 +192,180 @@ function subtractBinary() {
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Logic-Gates-Hacks">Logic Gates Hacks<a class="anchor-link" href="#Logic-Gates-Hacks"> </a></h2><h3 id="Questions">Questions<a class="anchor-link" href="#Questions"> </a></h3><ol>
+<li><p>How can logic gates be used to execute basic computer functions?(1-2 sentences)</p>
+<ul>
+<li>Logic gates can be combined in various ways to perform basic computer functions such as arithmetic, logical operations, and memory storage. These functions are the building blocks of a computer's central processing unit (CPU).</li>
+</ul>
+</li>
+<li><p>What is the difference between boolean operations and logic gates?(1-2 sentences)</p>
+<ul>
+<li>Boolean operations are abstract logical operations performed on Boolean values (True or False) that result in another Boolean value. Logic gates, on the other hand, are physical electronic devices that perform Boolean operations on binary signals (0 or 1) and output a binary signal based on the input signal. While boolean operations are a mathematical abstraction, logic gates are physical devices used in electronic circuits to implement boolean operations.</li>
+</ul>
+</li>
+<li><p>Complete this quiz and correct any mistakes in your blog</p>
+<ul>
+<li><img src="https://user-images.githubusercontent.com/111464920/235283000-e0948655-8cd9-4f3c-a897-b1704f5ceab2.png" alt="image"></li>
+<li>I got the first one wrong which is this one. I misread the question because I thought it was talking about AND and not OR.</li>
+<li><img src="https://user-images.githubusercontent.com/111464920/235283181-0da47784-5e8e-42ad-bd9e-61a1faae3fdc.png" alt="image"></li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fetching-Hacks">Fetching Hacks<a class="anchor-link" href="#Fetching-Hacks"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">const</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">27</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">32</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Charlie&#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">21</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">45</span> <span class="p">}</span>
+<span class="p">];</span>
+
+<span class="o">//</span> <span class="n">Filter</span> <span class="n">data</span> <span class="n">based</span> <span class="n">on</span> <span class="n">age</span> <span class="n">greater</span> <span class="n">than</span> <span class="mi">30</span>
+<span class="n">const</span> <span class="n">filteredData</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">filter</span><span class="p">((</span><span class="n">item</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">item</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">filteredData</span><span class="p">);</span>
+<span class="o">//</span> <span class="n">Output</span><span class="p">:</span> <span class="p">[{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">32</span> <span class="p">},</span> <span class="p">{</span> <span class="nb">id</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="s1">&#39;David&#39;</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">45</span> <span class="p">}]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{ id: 2, name: &#39;Bob&#39;, age: 32 }, { id: 4, name: &#39;David&#39;, age: 45 }
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Github-Pages-Hacks">Github Pages Hacks<a class="anchor-link" href="#Github-Pages-Hacks"> </a></h2><ol>
+<li>Github pages is a hosting service website. Search up another hosting service website other than Github's and write at least one benefit, advantage, or feature at is different from other hosting service websites.<ul>
+<li>One hosting service website that is different from GitHub Pages is Netlify. Netlify is a platform that provides continuous deployment and hosting services for web projects. One of the main advantages of Netlify is that it offers a powerful and flexible build system that allows developers to build, test, and deploy their projects automatically. Netlify also provides features such as forms handling, identity management, and serverless functions, which allow developers to build and deploy dynamic web applications without the need for a separate backend server. Additionally, Netlify provides a global content delivery network (CDN) and SSL encryption by default, ensuring that web applications hosted on the platform are fast, secure, and highly available.</li>
+</ul>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="APIs-Hacks">APIs Hacks<a class="anchor-link" href="#APIs-Hacks"> </a></h2><p>Take this python table and use a minimum of 3 pandas functions to analyze the data</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Dillon&#39;</span><span class="p">,</span> <span class="s1">&#39;Noor&#39;</span><span class="p">,</span> <span class="s1">&#39;Steven&#39;</span><span class="p">,</span> <span class="s1">&#39;Lucas&#39;</span><span class="p">,</span> <span class="s1">&#39;Harsha&#39;</span><span class="p">,</span> <span class="s1">&#39;Varalu&#39;</span><span class="p">,</span> <span class="s1">&#39;Ryan&#39;</span><span class="p">,</span> <span class="s1">&#39;Emaad&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+    <span class="s1">&#39;Gender&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Grade&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Gender&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Grade&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     Name  Age Gender Grade
+0  Dillon   24      M     A
+1    Noor   31      M     B
+2  Steven   42      M     A
+3   Lucas   27      M     D
+4  Harsha   29      F     C
+5  Varalu   26      F     F
+6    Ryan   90      F     B
+7   Emaad   15      F     A
+             Age
+count   8.000000
+mean   35.500000
+std    23.268618
+min    15.000000
+25%    25.500000
+50%    28.000000
+75%    33.750000
+max    90.000000
+         Age
+Gender      
+F       40.0
+M       31.0
+A    3
+B    2
+D    1
+C    1
+F    1
+Name: Grade, dtype: int64
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-Compression-Hacks">Data Compression Hacks<a class="anchor-link" href="#Data-Compression-Hacks"> </a></h2><p>Lossless compression algorithms typically work by finding patterns in the data and representing them with shorter codes, while ensuring that the compressed data can be perfectly reconstructed back to its original form. Examples of lossless compression algorithms include Huffman coding, Lempel-Ziv-Welch (LZW) compression, and DEFLATE.</p>
+<p>On the other hand, lossy compression algorithms work by permanently discarding some data that is deemed less important or less noticeable to the human eye. This allows for a higher compression ratio, but the reconstructed data will not be exactly the same as the original data. Lossy compression is often used for media files such as images, audio, and video, where small visual or auditory imperfections are generally acceptable. Examples of lossy compression algorithms include JPEG, MP3, and MPEG.</p>
+
+</div>
+</div>
+</div>
 </div>
  
 
