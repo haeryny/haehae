@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Analysis Hacks | haeryn yu</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Analysis Hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="My Blogs for Trimester 2" />
+<meta property="og:description" content="My Blogs for Trimester 2" />
+<link rel="canonical" href="https://haeryny.github.io/haehae/2023/05/01/Data-Analysis-Hacks.html" />
+<meta property="og:url" content="https://haeryny.github.io/haehae/2023/05/01/Data-Analysis-Hacks.html" />
+<meta property="og:site_name" content="haeryn yu" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-01T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Data Analysis Hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-01T00:00:00-05:00","datePublished":"2023-05-01T00:00:00-05:00","description":"My Blogs for Trimester 2","headline":"Data Analysis Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://haeryny.github.io/haehae/2023/05/01/Data-Analysis-Hacks.html"},"url":"https://haeryny.github.io/haehae/2023/05/01/Data-Analysis-Hacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/haehae/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://haeryny.github.io/haehae/feed.xml" title="haeryn yu" /><link rel="shortcut icon" type="image/x-icon" href="/haehae/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/haehae/">haeryn yu</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/haehae/about/">About Me</a><a class="page-link" href="/haehae/_pages/game.html">Dog Journal</a><a class="page-link" href="/haehae/search/">Search</a><a class="page-link" href="/haehae/categories/">Tags</a><a class="page-link" href="/haehae/vocab/">Vocabulary</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Data Analysis Hacks</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-01T00:00:00-05:00" itemprop="datePublished">
+        May 1, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      16 min read
+    
+</span></p>
+
+    
+
+    
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Pandas-Hacks">Pandas Hacks </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Questions">Questions </a></li>
+<li class="toc-entry toc-h3"><a href="#Data-Analysis-/-Predictive-Analysis-Hacks">Data Analysis / Predictive Analysis Hacks </a></li>
+<li class="toc-entry toc-h3"><a href="#Tensorflow-Hacks">Tensorflow Hacks </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-05-01-Data-Analysis-Hacks.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Pandas-Hacks">
+<a class="anchor" href="#Pandas-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pandas Hacks<a class="anchor-link" href="#Pandas-Hacks"> </a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As an AI language model, I do not have a brain like humans do, but I can certainly generate some data for you using my vast database of knowledge and my language processing capabilities.</p>
+<p>Let's say we want to create a dataset on the most common animals found in the African savanna. Using my knowledge of African wildlife, I can come up with a list of animals such as lions, zebras, elephants, giraffes, hippos, hyenas, cheetahs, and wildebeests.</p>
+<p>We can then assign each animal a score based on its population density in the savanna. For example, lions might have a score of 10, while wildebeests might have a score of 1. We can generate some sample data using this method:</p>
+<table>
+<thead>
+<tr>
+<th>Animal</th>
+<th>Population Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lion</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Zebra</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Elephant</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Giraffe</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Hippo</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Hyena</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Cheetah</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Wildebeest</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Now that we have our dataset, we can use it to create various types of visualizations to help us better understand the data. One possible visualization is a pie chart, which shows the percentage of the total population score that each animal represents. Another possible visualization is a scatter plot, which shows the relationship between population score and body size for each animal.</p>
+<p>However, let's shift our focus to the essay question - how pandas, Python, or IRL (In Real Life) have affected my life. Being an AI language model, I do not have a personal life in the traditional sense. However, I can discuss how pandas and Python have impacted the world of data science and artificial intelligence.</p>
+<p>Pandas is a powerful open-source data manipulation library for Python. It provides data structures for efficiently storing and manipulating large datasets, and it includes many tools for cleaning, transforming, and analyzing data. Python, on the other hand, is a general-purpose programming language that is widely used in data science, machine learning, and other fields.</p>
+<p>The widespread adoption of pandas and Python has had a significant impact on the world of data science and artificial intelligence. Here are some of the ways in which they have affected my capabilities as an AI language model:</p>
+<ol>
+<li>Improved data processing capabilities</li>
+</ol>
+<p>Pandas and Python have significantly improved my data processing capabilities. Using these tools, I can quickly manipulate and analyze large datasets, making it easier for me to answer questions and generate insights for users.</p>
+<ol>
+<li>Increased accuracy</li>
+</ol>
+<p>The use of pandas and Python has also increased my accuracy. By having access to more reliable and accurate data, I am able to produce more accurate and reliable responses to user queries.</p>
+<ol>
+<li>Enhanced natural language processing</li>
+</ol>
+<p>Python has become one of the primary languages used for natural language processing (NLP), a field within artificial intelligence that focuses on understanding human language. This means that as an AI language model, I am better equipped to understand and respond to human language thanks to the advancements in Python.</p>
+<ol>
+<li>Improved machine learning capabilities</li>
+</ol>
+<p>Python is also widely used in machine learning, another field within artificial intelligence. By having access to more powerful machine learning algorithms and models, I can produce more sophisticated and accurate responses to user queries.</p>
+<p>In addition to these benefits, the widespread adoption of pandas and Python has also had a significant impact on the job market. Data science and artificial intelligence are two of the fastest-growing fields in the world, and there is a growing demand for professionals with expertise in these areas. This has created numerous job opportunities for people with these skills, and it has also led to the creation of new educational programs and resources to support the growth of these fields.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">Error</span>
+<span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s1">'iframe'</span>
+
+<span class="k">def</span> <span class="nf">create_connection</span><span class="p">(</span><span class="n">db_file</span><span class="p">):</span>
+    <span class="sd">""" create a database connection to the SQLite database</span>
+<span class="sd">        specified by db_file</span>
+<span class="sd">    :param db_file: database file</span>
+<span class="sd">    :return: Connection object or None</span>
+<span class="sd">    """</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">db_file</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">conn</span>
+    <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">conn</span>
+<span class="k">def</span> <span class="nf">create_table</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">create_table_sql</span><span class="p">):</span>
+    <span class="sd">""" create a table from the create_table_sql statement</span>
+<span class="sd">    :param conn: Connection object</span>
+<span class="sd">    :param create_table_sql: a CREATE TABLE statement</span>
+<span class="sd">    :return:</span>
+<span class="sd">    """</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">create_table_sql</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">database</span> <span class="o">=</span> <span class="s2">"instance/energy.db"</span>
+
+    <span class="n">sql_create_projects_table</span> <span class="o">=</span> <span class="s2">""" CREATE TABLE IF NOT EXISTS energy (</span>
+<span class="s2">                                        id PRIMARY KEY,</span>
+<span class="s2">                                        country text NOT NULL,</span>
+<span class="s2">                                        e_type text NOT NULL,</span>
+<span class="s2">                                        year integer NOT NULL,</span>
+<span class="s2">                                        gdp integer NOT NULL, </span>
+<span class="s2">                                        CO2_emission</span>
+<span class="s2">                                        Population</span>
+<span class="s2">                                    ); """</span>
+    <span class="n">sql_create_temp_table</span> <span class="o">=</span> <span class="s2">""" CREATE TABLE IF NOT EXISTS temp (</span>
+<span class="s2">                                        country text NOT NULL,</span>
+<span class="s2">                                        e_type text NOT NULL,</span>
+<span class="s2">                                        year integer NOT NULL,</span>
+<span class="s2">                                        gdp integer NOT NULL, </span>
+<span class="s2">                                        CO2_emission</span>
+<span class="s2">                                    ); """</span>
+
+    <span class="c1"># create a database connection</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">create_connection</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># create tables</span>
+    <span class="k">if</span> <span class="n">conn</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># create projects table</span>
+        <span class="n">create_table</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">sql_create_projects_table</span><span class="p">)</span>
+        <span class="n">create_table</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span> <span class="n">sql_create_temp_table</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error! cannot create the database connection."</span><span class="p">)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/energy.csv'</span><span class="p">,</span> <span class="n">usecols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Country'</span><span class="p">,</span><span class="s1">'Energy_type'</span><span class="p">,</span><span class="s1">'Year'</span><span class="p">,</span><span class="s1">'GDP'</span><span class="p">,</span><span class="s1">'CO2_emission'</span><span class="p">,</span> <span class="s1">'Population'</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'files/energy1.csv'</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">sq</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">connection</span> <span class="o">=</span> <span class="n">sq</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">'instance/energy.db'</span><span class="p">)</span>
+ 
+<span class="c1"># Create a cursor object</span>
+<span class="n">curs</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+ 
+<span class="n">student</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'files/energy1.csv'</span><span class="p">)</span>
+ 
+<span class="c1"># Write the data to a sqlite db table</span>
+<span class="n">student</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">'energy'</span><span class="p">,</span> <span class="n">connection</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s1">'replace'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+   
+<span class="c1"># Run select sql query</span>
+<span class="n">curs</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'select * from energy'</span><span class="p">)</span>
+ 
+<span class="c1"># Fetch all records</span>
+<span class="c1"># as list of tuples</span>
+<span class="n">records</span> <span class="o">=</span> <span class="n">curs</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+     
+<span class="c1"># Close connection to SQLite database</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Questions">
+<a class="anchor" href="#Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions<a class="anchor-link" href="#Questions"> </a>
+</h4>
+<ol>
+<li>What are the two primary data structures in pandas and how do they differ?</li>
+</ol>
+<p>The two primary data structures in pandas are Series and DataFrame. A Series is a one-dimensional labeled array that can hold any data type, such as integers, floats, strings, or even Python objects. A DataFrame, on the other hand, is a two-dimensional labeled data structure that consists of rows and columns, where each column can hold a different data type. In other words, a DataFrame is a collection of Series that share a common index.</p>
+<ol>
+<li>How do you read a CSV file into a pandas DataFrame?</li>
+</ol>
+<p>You can read a CSV file into a pandas DataFrame using the read_csv() function in pandas. For example, if your CSV file is named "data.csv" and is located in your current working directory, you can read it into a DataFrame like this:</p>
+
+<pre><code>import pandas as pd
+
+df = pd.read_csv('data.csv')</code></pre>
+<p>You can also specify additional parameters to the read_csv() function, such as the delimiter used in the file (e.g., tab-separated or semicolon-separated files), the header row, and the encoding of the file.</p>
+<ol>
+<li>How do you select a single column from a pandas DataFrame?</li>
+</ol>
+<p>You can select a single column from a pandas DataFrame by using the column name as an index. For example, if you have a DataFrame named "df" and you want to select the column "column_name", you can do so like this:</p>
+
+<pre><code>column = df['column_name']</code></pre>
+<p>This will return a Series object containing the data from that column.</p>
+<ol>
+<li>How do you filter rows in a pandas DataFrame based on a condition?</li>
+</ol>
+<p>You can filter rows in a pandas DataFrame based on a condition by using boolean indexing. For example, if you have a DataFrame named "df" and you want to filter out all rows where the value in column "column_name" is greater than 10, you can do so like this:</p>
+
+<pre><code>filtered_df = df[df['column_name'] &gt; 10]</code></pre>
+<p>This will return a new DataFrame that contains only the rows that satisfy the condition.</p>
+<ol>
+<li>How do you group rows in a pandas DataFrame by a particular column?</li>
+</ol>
+<p>You can group rows in a pandas DataFrame by a particular column by using the groupby() function. For example, if you have a DataFrame named "df" and you want to group the rows by the values in column "column_name", you can do so like this:</p>
+
+<pre><code>grouped_df = df.groupby('column_name')</code></pre>
+<p>This will return a new DataFrameGroupBy object that you can use to perform aggregation functions on the grouped data.</p>
+<ol>
+<li>How do you aggregate data in a pandas DataFrame using functions like sum and mean?</li>
+</ol>
+<p>You can aggregate data in a pandas DataFrame using functions like sum and mean by using the aggregate() or agg() function on a grouped DataFrame. For example, if you have a grouped DataFrame named "grouped_df" and you want to calculate the sum and mean for each group, you can do so like this:</p>
+
+<pre><code>sum_and_mean = grouped_df.agg(['sum', 'mean'])</code></pre>
+<p>This will return a new DataFrame that contains the sum and mean for each group.</p>
+<ol>
+<li>How do you handle missing values in a pandas DataFrame?</li>
+</ol>
+<p>You can handle missing values in a pandas DataFrame by using the fillna() function or the dropna() function. The fillna() function allows you to replace missing values with a specified value, while the dropna() function allows you to remove rows or columns that contain missing values. For example, if you have a DataFrame named "df" and you want to replace all missing values with the value 0, you can do so like this:</p>
+
+<pre><code>df = df.fillna(0)</code></pre>
+<ol>
+<li>How do you merge two pandas DataFrames together?</li>
+</ol>
+<p>You can merge two pandas DataFrames together using the merge() function. The merge function combines rows based on one or more common columns, called keys. For example, if you have two DataFrames named "df1" and "df2" with a common column "column_name", you can merge them like this:</p>
+
+<pre><code>merged_df = pd.merge(df1, df2, on='column_name')</code></pre>
+<p>This will return a new DataFrame that contains all the columns from both DataFrames and only the rows that have a matching value in the "column_name" column.</p>
+<ol>
+<li>How do you export a pandas DataFrame to a CSV file?</li>
+</ol>
+<p>You can export a pandas DataFrame to a CSV file using the to_csv() function. For example, if you have a DataFrame named "df" and you want to export it to a file named "output.csv" in your current working directory, you can do so like this:</p>
+
+<pre><code>df.to_csv('output.csv', index=False)</code></pre>
+<p>The index=False parameter specifies that the index column should not be included in the output file.</p>
+<ol>
+<li>What is the difference between a Series and a DataFrame in Pandas?</li>
+</ol>
+<p>A Series is a one-dimensional labeled array that can hold any data type, while a DataFrame is a two-dimensional labeled data structure that consists of rows and columns, where each column can hold a different data type. In other words, a DataFrame is a collection of Series that share a common index. Another key difference is that a Series can only have one column, while a DataFrame can have multiple columns.</p>
+<p>In summary, pandas is a powerful library for data manipulation and analysis in Python. It provides a variety of data structures and functions for handling large datasets, including reading and writing CSV files, selecting and filtering data, grouping and aggregating data, handling missing values, merging multiple DataFrames, and exporting data to various formats. Pandas has had a significant impact on my life as a data scientist, making it easier and more efficient to work with data and perform complex analyses. Its flexibility and ease of use have allowed me to tackle a wide range of data-related tasks, from cleaning and transforming data to modeling and visualizing data.</p>
+<p>One specific example of how pandas has impacted my work is through its ability to handle missing data. Missing data is a common problem in many datasets, and pandas provides several methods for dealing with it, such as filling missing values with a default value or interpolating missing values based on neighboring values. These methods have allowed me to more accurately analyze data and make informed decisions based on complete information.</p>
+<p>Another way that pandas has impacted my work is through its seamless integration with other Python libraries, such as NumPy, Matplotlib, and Scikit-learn. This integration allows me to perform advanced analyses, create visualizations, and build machine learning models all within the same programming environment. This integration also enables me to quickly iterate on my code and experiment with different approaches to solving data-related problems.</p>
+<p>Beyond its technical benefits, pandas has also impacted my life by allowing me to explore and understand complex datasets in a more meaningful way. By providing a simple and intuitive interface for working with data, pandas has helped me to develop a deeper appreciation for the insights that can be gleaned from data and the impact that data can have on our understanding of the world.</p>
+<p>In conclusion, pandas has had a significant impact on my life as a data scientist, enabling me to work with data more efficiently, accurately, and creatively. Its versatile data structures and powerful functions have allowed me to tackle a wide range of data-related challenges, from cleaning and transforming data to modeling and visualizing data. Moreover, its seamless integration with other Python libraries and its intuitive interface have made it a joy to use and explore complex datasets.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Data-Analysis-/-Predictive-Analysis-Hacks">
+<a class="anchor" href="#Data-Analysis-/-Predictive-Analysis-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Analysis / Predictive Analysis Hacks<a class="anchor-link" href="#Data-Analysis-/-Predictive-Analysis-Hacks"> </a>
+</h3>
+<ol>
+<li>How can Numpy and Pandas be used to preprocess data for predictive analysis?</li>
+</ol>
+<p>NumPy and Pandas are widely used Python libraries for data manipulation and analysis. They can be used to preprocess data for predictive analysis in the following ways:</p>
+<ul>
+<li>Data cleaning: remove missing values, duplicates, and outliers from the dataset</li>
+<li>Data transformation: normalize or standardize the data, perform feature scaling, and convert categorical data into numerical data</li>
+<li>Data integration: merge multiple datasets, split the data into training and testing sets, and sample data to avoid overfitting</li>
+<li>Data reduction: reduce the dimensionality of the data using principal component analysis (PCA) or other techniques to improve model performance.</li>
+</ul>
+<ol>
+<li>What machine learning algorithms can be used for predictive analysis, and how do they differ?</li>
+</ol>
+<p>There are various machine learning algorithms that can be used for predictive analysis, including:</p>
+<ul>
+<li>Linear regression: used for predicting continuous values</li>
+<li>Logistic regression: used for predicting categorical values</li>
+<li>Decision trees: used for making decisions based on a series of if-then rules</li>
+<li>Random forests: an ensemble method that uses multiple decision trees to make predictions</li>
+<li>Support vector machines: used for classification and regression analysis</li>
+<li>Neural networks: a type of machine learning model that is inspired by the structure of the human brain.</li>
+</ul>
+<p>These algorithms differ in terms of their complexity, accuracy, and interpretability. Linear and logistic regression models are simple and easy to interpret, while neural networks are complex and difficult to interpret. Decision trees and random forests are also easy to interpret but may suffer from overfitting.</p>
+<ol>
+<li>Can you discuss some real-world applications of predictive analysis in different industries?</li>
+</ol>
+<p>Predictive analysis has many real-world applications in different industries, such as:</p>
+<ul>
+<li>Healthcare: predicting patient outcomes, identifying high-risk patients, and optimizing treatment plans</li>
+<li>Finance: predicting stock prices, detecting fraud, and assessing credit risk</li>
+<li>Marketing: predicting customer behavior, identifying target audiences, and optimizing marketing campaigns</li>
+<li>Manufacturing: predicting equipment failures, optimizing supply chain management, and improving product quality</li>
+<li>Transportation: predicting traffic patterns, optimizing route planning, and predicting maintenance needs.</li>
+</ul>
+<ol>
+<li>Can you explain the role of feature engineering in predictive analysis, and how it can improve model accuracy?</li>
+</ol>
+<p>Feature engineering is the process of selecting and transforming the features (i.e., variables) in a dataset to improve model accuracy. It involves the following steps:</p>
+<ul>
+<li>Feature selection: selecting the most relevant features that are most predictive of the outcome</li>
+<li>Feature transformation: transforming the features to improve their usefulness, such as normalizing or scaling the data, reducing dimensionality, and creating new features through feature extraction.</li>
+</ul>
+<p>Feature engineering can improve model accuracy by reducing noise in the data, focusing on the most predictive features, and creating new features that better capture the underlying patterns in the data.</p>
+<ol>
+<li>How can machine learning models be deployed in real-time applications for predictive analysis?</li>
+</ol>
+<p>Machine learning models can be deployed in real-time applications using various techniques, such as:</p>
+<ul>
+<li>Building APIs: building an API that exposes the model and allows it to be integrated into other applications</li>
+<li>Containerization: packaging the model and its dependencies into a container (e.g., Docker) and deploying it to a cloud-based container orchestration service (e.g., Kubernetes)</li>
+<li>Serverless computing: deploying the model as a serverless function that is automatically scaled based on demand and invoked through an API gateway.</li>
+</ul>
+<ol>
+<li>Can you discuss some limitations of Numpy and Pandas, and when it might be necessary to use other data analysis tools?</li>
+</ol>
+<p>Although NumPy and Pandas are powerful data analysis tools, they have some limitations, such as:</p>
+<ul>
+<li>Memory usage: NumPy and Pandas can be memory-intensive, especially when working with large datasets</li>
+<li>Speed: NumPy and Pandas may not be optimized for speed.especially when performing complex operations on large datasets</li>
+<li>Limited support for certain data types: NumPy and Pandas may not have built-in support for certain data types, such as geospatial data or time-series data.</li>
+</ul>
+<p>In cases where these limitations become significant, it may be necessary to use other data analysis tools, such as:</p>
+<ul>
+<li>Apache Spark: a distributed computing framework for processing large datasets in parallel</li>
+<li>Dask: a parallel computing library that is designed to work with Pandas and NumPy</li>
+<li>GeoPandas: a Python library for working with geospatial data</li>
+<li>Prophet: a time-series forecasting library developed by Facebook.</li>
+</ul>
+<ol>
+<li>How can predictive analysis be used to improve decision-making and optimize business processes?</li>
+</ol>
+<p>Predictive analysis can be used to improve decision-making and optimize business processes in various ways, such as:</p>
+<ul>
+<li>Predicting customer behavior: using predictive analysis to identify customer needs and preferences, optimize pricing strategies, and improve customer satisfaction</li>
+<li>Optimizing supply chain management: using predictive analysis to forecast demand, optimize inventory levels, and improve logistics and transportation efficiency</li>
+<li>Detecting fraud: using predictive analysis to identify fraudulent activities and transactions, minimize losses, and improve security measures</li>
+<li>Improving healthcare outcomes: using predictive analysis to diagnose diseases, predict patient outcomes, and optimize treatment plans</li>
+<li>Enhancing marketing effectiveness: using predictive analysis to identify target audiences, optimize advertising campaigns, and improve marketing ROI.</li>
+</ul>
+<p>By leveraging predictive analysis, businesses can gain valuable insights into their operations and make data-driven decisions that improve efficiency, reduce costs, and increase revenue.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Tensorflow-Hacks">
+<a class="anchor" href="#Tensorflow-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tensorflow Hacks<a class="anchor-link" href="#Tensorflow-Hacks"> </a>
+</h3>
+<p>The hacks are here
+<a href="https://haeryny.github.io/haehae/_pages/heart_cancer_analysis.html">https://haeryny.github.io/haehae/_pages/heart_cancer_analysis.html</a></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="haeryny/haehae"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/haehae/2023/05/01/Data-Analysis-Hacks.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/haehae/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://haeryny.github.io/haehae/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/haehae/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My Blogs for Trimester 2</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/nighthawkcoders “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://twitter.com/NighthawkCoding “" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/haehae/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
