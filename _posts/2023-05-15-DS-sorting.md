@@ -182,13 +182,22 @@ Random List
 <ul>
 <li>When should you use each algorithm? What makes an algorithm the right choice?</li>
 <li>Given the following lists...<ul>
-<li>[0, 2, 6, 4, 8, 10]</li>
-<li>[Elephant, Banana, Cat, Dog, Apple]</li>
-<li>[29, 13, 83, 47, 32, 78, 100, 60, 65, 15, 24, 9, 40, 68, 53, 8, 90, 58, 39, 32, 34, 91, 74, 94, 49, 87, 34, 87, 23, 17, 27, 2, 38, 58, 84, 15, 9, 46, 74, 40, 44, 8, 55, 28, 81, 92, 81, 88, 53, 38, 19, 21, 9, 54, 21, 67, 3, 41, 3, 74, 13, 71, 70, 45, 5, 36, 80, 64, 97, 86, 73, 74, 94, 79, 49, 32, 20, 68, 64, 69, 1, 77, 31, 56, 100, 80, 48, 75, 85, 93, 67, 57, 26, 56, 43, 53, 59, 28, 67, 50]
-Select the algorithm you believe is best for each, explain.</li>
+<li>[0, 2, 6, 4, 8, 10] <ul>
+<li>Insertion, you compare two values at a time because only two numbers have to be switched.</li>
+</ul>
+</li>
+<li>[Elephant, Banana, Cat, Dog, Apple]<ul>
+<li>Selection, you compare one value with all the other values and all the words have to be reversed in the list.</li>
+</ul>
+</li>
+<li>[29, 13, 83, 47, 32, 78, 100, 60, 65, 15, 24, 9, 40, 68, 53, 8, 90, 58, 39, 32, 34, 91, 74, 94, 49, 87, 34, 87, 23, 17, 27, 2, 38, 58, 84, 15, 9, 46, 74, 40, 44, 8, 55, 28, 81, 92, 81, 88, 53, 38, 19, 21, 9, 54, 21, 67, 3, 41, 3, 74, 13, 71, 70, 45, 5, 36, 80, 64, 97, 86, 73, 74, 94, 79, 49, 32, 20, 68, 64, 69, 1, 77, 31, 56, 100, 80, 48, 75, 85, 93, 67, 57, 26, 56, 43, 53, 59, 28, 67, 50]<ul>
+<li>Merge, you can view large groups of value at a time.</li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+<p>Select the algorithm you believe is best for each, explain.</p>
 
 </div>
 </div>
@@ -202,8 +211,12 @@ Select the algorithm you believe is best for each, explain.</li>
 </li>
 <li><p>Run code and then research and answer these questions...</p>
 <ul>
-<li>Is a list and/or dictionary in python considered a primitive or collection type?  Why?</li>
-<li>Is the list passed into bubble sort "pass-by-value" or "pass-by-reference? Describe why in relation to output.</li>
+<li>Is a list and/or dictionary in python considered a primitive or collection type?  Why?<blockquote>
+</blockquote>
+</li>
+<li>Is the list passed into bubble sort "pass-by-value" or "pass-by-reference? Describe why in relation to output.<blockquote>
+</blockquote>
+</li>
 </ul>
 </li>
 <li><p>Implement new cell(s) and/or organize cells to do the following.</p>
@@ -278,6 +291,27 @@ Select the algorithm you believe is best for each, explain.</li>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original
+[{&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}]
+name
+[{&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}, {&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}]
+age
+[{&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}, {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}]
+city
+[{&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}, {&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
