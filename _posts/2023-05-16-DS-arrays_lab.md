@@ -248,10 +248,10 @@ For loop with shortcut (*) row expansion
 
 
 
-<div id="08dd93e3-e148-4d12-a4c9-df12bb2003f3"></div>
+<div id="790f8256-bdc4-43a6-9d18-d64f0b6b0fea"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#08dd93e3-e148-4d12-a4c9-df12bb2003f3');
+var element = $('#790f8256-bdc4-43a6-9d18-d64f0b6b0fea');
 
 /*
 * Creator: Nighthawk Coding Society
@@ -763,6 +763,83 @@ element.append(arr2D);
 <span class="ansi-magenta-fg">                                                          \__ |__/ 
                                                            \____/  
 </span><span class="ansi-blue-fg">----------------------------------------------------------------</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░░▄███▄███▄░░░░░░░░░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░░█████████░░░░░░░░░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░░▒▀█████▀░░░░░░░░░░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░░▒░░▀█▀░░░░░░░░░░░░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░░▒░░█░░░░░░░░░░░░░░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░░▒░█░░░░░░░░░░░░░░░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░░░█░░░░░░░░░░░░░░░░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░░█░░░░███████░░░░░░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░██░░░██▓▓███▓██▒░░░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;██░░░█▓▓▓▓▓▓▓█▓████░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;██░░██▓▓▓▓^▓▓▓█▓█▓█░░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;███▓▓▓█▓▓▓▓▓█▓█▓▓▓▓█░░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;▀██▓▓█░██▓▓▓▓██▓▓▓▓▓█░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░▀██▀░░█▓▓▓▓▓▓▓▓▓▓▓▓▓█░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░░░░▒░░░█▓▓▓▓▓█▓▓▓▓▓▓█░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░░░░▒░░░█▓▓▓▓█▓█▓▓▓▓▓█░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░▒░░▒░░░█▓▓▓█▓▓▓█▓▓▓▓█░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░▒░░▒░░░█▓▓▓█░░░█▓▓▓█░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;░▒░░▒░░██▓██░░░██▓▓██░░&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;████████████████████████&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;▀██▀─▄███▄─▀██─██▀██▀▀█&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;─██─███─███─██─██─██▄█&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;─██─▀██▄██▀─▀█▄█▀─██▀█&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;▄██▄▄█▀▀▀─────▀──▄██▄▄█&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>░░▄███▄███▄░░░░░░░░░░░░
+░░█████████░░░░░░░░░░░░
+░░▒▀█████▀░░░░░░░░░░░░░
+░░▒░░▀█▀░░░░░░░░░░░░░░░
+░░▒░░█░░░░░░░░░░░░░░░░░
+░░▒░█░░░░░░░░░░░░░░░░░░
+░░░█░░░░░░░░░░░░░░░░░░░
+░░█░░░░███████░░░░░░░░░
+░██░░░██▓▓███▓██▒░░░░░░
+██░░░█▓▓▓▓▓▓▓█▓████░░░░
+██░░██▓▓▓▓^▓▓▓█▓█▓█░░░░
+███▓▓▓█▓▓▓▓▓█▓█▓▓▓▓█░░░
+▀██▓▓█░██▓▓▓▓██▓▓▓▓▓█░░
+░▀██▀░░█▓▓▓▓▓▓▓▓▓▓▓▓▓█░
+░░░░▒░░░█▓▓▓▓▓█▓▓▓▓▓▓█░
+░░░░▒░░░█▓▓▓▓█▓█▓▓▓▓▓█░
+░▒░░▒░░░█▓▓▓█▓▓▓█▓▓▓▓█░
+░▒░░▒░░░█▓▓▓█░░░█▓▓▓█░░
+░▒░░▒░░██▓██░░░██▓▓██░░
+████████████████████████
+▀██▀─▄███▄─▀██─██▀██▀▀█
+─██─███─███─██─██─██▄█
+─██─▀██▄██▀─▀█▄█▀─██▀█
+▄██▄▄█▀▀▀─────▀──▄██▄▄█
 </pre>
 </div>
 </div>
