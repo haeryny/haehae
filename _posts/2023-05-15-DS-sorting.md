@@ -211,10 +211,10 @@ Random List
 </li>
 <li><p>Run code and then research and answer these questions...</p>
 <ul>
-<li>Is a list and/or dictionary in python considered a primitive or collection type?  Why?<blockquote>
+<li>Is a list and/or dictionary in python considered a primitive or collection type?  Why?<blockquote><p>In Python, a list and a dictionary are considered collection types rather than primitive types. Primitive types in Python are basic and immutable data types, such as integers, floating-point numbers, booleans, and strings. They are not capable of storing multiple values or elements. On the other hand, a list is an ordered collection of elements, allowing duplicate values and supporting various operations like indexing, appending, removing, and iterating. It is mutable, which means you can modify its elements after creation. A dictionary, also known as a hash table or associative array, is an unordered collection of key-value pairs. Each value is associated with a unique key, allowing efficient lookup and retrieval of values based on the keys. Dictionaries are also mutable. Both lists and dictionaries provide a way to organize and manipulate data in a more complex manner than primitive types, making them collection types in Python.</p>
 </blockquote>
 </li>
-<li>Is the list passed into bubble sort "pass-by-value" or "pass-by-reference? Describe why in relation to output.<blockquote>
+<li>Is the list passed into bubble sort "pass-by-value" or "pass-by-reference? Describe why in relation to output.<blockquote><p>Python uses a mechanism called "pass-by-object-reference," which means that when you pass a variable as an argument to a function, a reference to the object is passed, rather than creating a new copy of the object. This behavior applies to mutable objects like lists. When a list is passed by reference to the bubble sort algorithm, any modifications made to the list within the function will be reflected in the original list outside the function. Bubble sort works by swapping elements within the list, and these swaps will directly affect the original list.</p>
 </blockquote>
 </li>
 </ul>
