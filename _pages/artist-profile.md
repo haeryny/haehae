@@ -58,7 +58,77 @@ body {
 <body>
 
 <h1>Looking for new people to listen to? Need better music taste? Go here!</h1>
-<h3>Searching algorithm to search for artists here</h3>
+
+<html>
+<head>
+  <title>Artist Genre Searcher</title>
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+    }
+    .artist-list {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Artist Genre Sorter</h1>
+    <label for="genre-input">Enter the desired genre:</label>
+    <input type="text" id="genre-input">
+    <button onclick="sortArtists()">Sort Artists</button>
+    <div class="artist-list" id="artist-list"></div>
+  </div>
+
+  <script>
+    // list of all the artists
+    const artists = [
+      { name: "Anitta", genre: "R&B/Soul" },
+      { name: "Omar Apollo", genre: "Alternative/Indie" },
+      { name: "DOMi & JD BECK", genre: "Jazz" },
+      { name: "Muni Long", genre: "R&B/Soul" },
+      { name: "Samara Joy", genre: "Jazz" },
+      { name: "Latto", genre: "Hip-Hop/Rap" },
+      { name: "Måneskin", genre: "Pop Rock" },
+      { name: "Tobe Nwigwe", genre: "Hip-Hop/Rap" },
+      { name: "Molly Tuttle", genre: "Folk" },
+      { name: "Wet Leg", genre: "Alternative/Indie" },
+      { name: "Mabu", genre: "Hip-Hop/Rap" },
+      { name: "Alaina Castillo", genre: "Folk" },
+      { name: "Dean", genre: "R&B/Soul" },
+      { name: "Sean Yeung", genre: "Pop" },
+      { name: "Amber Mark", genre: "R&B/Soul" },
+    ];
+
+    // function for sorting all the artists
+    function sortArtists() {
+      const desiredGenre = document.getElementById("genre-input").value.toLowerCase();
+      const sortedArtists = artists.filter(artist => artist.genre.toLowerCase() === desiredGenre);
+      sortedArtists.sort((a, b) => a.name.localeCompare(b.name));
+
+      const artistList = document.getElementById("artist-list");
+      artistList.innerHTML = "";
+
+      if (sortedArtists.length > 0) {
+        const listItems = sortedArtists.map(artist => `<li>${artist.name}</li>`);
+        artistList.innerHTML = `<ul>${listItems.join("")}</ul>`;
+      } else {
+        artistList.innerHTML = "No artists found in the desired genre.";
+      }
+    }
+  </script>
+</body>
+</html>
 
 <div class="row">
   <div class="column">
@@ -71,7 +141,7 @@ body {
           <a href="https://en.wikipedia.org/wiki/Anitta_(singer)" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://images.hola.com/us/images/0277-159b34c4ab78-80f5ff3eee37-1000/horizontal-1200/anitta.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: R&B/Soul</span>
+            <span class="shop-item-genre">Genre: R&B/Soul</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -89,7 +159,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://apeconcerts.com/wp-content/uploads/2019/07/omarapollo_19_1024-1.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Alternative/Indie</span>
+            <span class="shop-item-genre">Genre: Alt/Indie</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -107,7 +177,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://ichef.bbci.co.uk/news/976/cpsprodpb/13E87/production/_128534518_domiandjdpressphoto.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Jazz</span>
+            <span class="shop-item-genre">Genre: Jazz</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -125,7 +195,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://variety.com/wp-content/uploads/2022/01/MuniLong.jpg?w=1000" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: R&B/Soul</span>
+            <span class="shop-item-genre">Genre: R&B/Soul</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -143,7 +213,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://yt3.googleusercontent.com/QCROAE6X89edEDpIGvoGM9mDqX4kVwu2rpxCYOFbG8N9yVg6DvCZVOxbzqj57yRmwXQM-RjbRg=s900-c-k-c0x00ffffff-no-rj" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Jazz</span>
+            <span class="shop-item-genre">Genre: Jazz</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -163,7 +233,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://i.insider.com/642bfb60fcb86b001803092b?width=700" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Hip-Hop/Rap</span>
+            <span class="shop-item-genre">Genre: Hip-Hop/Rap</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -181,7 +251,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://www.nme.com/wp-content/uploads/2022/05/NME%E2%80%93MAneskin-EUROVISION%E2%80%93Credit-Fabio-Germinario-7_2000.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Pop Rock</span>
+            <span class="shop-item-genre">Genre: Pop Rock</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -199,7 +269,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://www.okayafrica.com/media-library/image.jpg?id=18782629&width=1245&height=700&quality=85&coordinates=0%2C1358%2C0%2C1359" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Hip-Hop/Rap</span>
+            <span class="shop-item-genre">Genre: Hip-Hop/Rap</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -217,7 +287,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://www.paloaltoonline.com/news/photos/2019/september/25/80075_original.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Folk</span>
+            <span class="shop-item-genre">Genre: Folk</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -235,7 +305,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://media.npr.org/assets/img/2022/04/08/hollie-fernando_wet-leg-4-ret-240dpi-cca1fbaad9a5765d204b3d3cd169ff515e84a1dd-s1100-c50.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Alternative/Indie</span>
+            <span class="shop-item-genre">Genre: Alt/Indie</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -255,7 +325,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://i.ytimg.com/vi/SDLy2FagJEI/maxresdefault.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Hip-Hop/Rap</span>
+            <span class="shop-item-genre">Genre: Hip-Hop/Rap</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -273,7 +343,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://assets.teenvogue.com/photos/5e874b505bb5580009f27182/16:9/w_2560%2Cc_limit/Unknown.jpeg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Folk</span>
+            <span class="shop-item-genre">Genre: Folk</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -291,7 +361,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://alchetron.com/cdn/dean-south-korean-singer-ef7fe26f-7391-49a8-92ce-fbd0163a4f9-resize-750.jpeg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: R&B/Soul</span>
+            <span class="shop-item-genre">Genre: R&B/Soul</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -309,7 +379,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/111464920/240037244-28741ef6-018b-4e18-8e41-7da3823248fa.png" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: Pop</span>
+            <span class="shop-item-genre">Genre: Pop</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -327,7 +397,7 @@ body {
           <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://www.billboard.com/wp-content/uploads/2022/01/Billboard_Amber_Mark_006.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
-            <span class="shop-item-price">Genre: R&B/Soul</span>
+            <span class="shop-item-genre">Genre: R&B/Soul</span>
             <button class="btn btn-primary shop-item-button" type="button">ADD TO FAVORITES</button>
           </div>
         </div>
@@ -350,6 +420,7 @@ if (document.readyState == 'loading') {
 } else {
     ready()
 }
+// code for adding the artists to favorites
 function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
@@ -366,30 +437,23 @@ function ready() {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
     }
-    // document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
+// code to remove artist from favorites
 function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
-    updateCartTotal()
-}
-function quantityChanged(event) {
-    var input = event.target
-    if (isNaN(input.value) || input.value <= 0) {
-        input.value = 1
-    }
     updateCartTotal()
 }
 function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
-    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+    var genre = shopItem.getElementsByClassName('shop-item-genre')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-    addItemToCart(title, price, imageSrc)
+    addItemToCart(title, genre, imageSrc)
     updateCartTotal()
 }
-function addItemToCart(title, price, imageSrc) {
+function addItemToCart(title, genre, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -405,7 +469,7 @@ function addItemToCart(title, price, imageSrc) {
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
         </div>
-        <span class="cart-price cart-column">${price}</span>
+        <span class="cart-genre cart-column">${genre}</span>
         <div class="cart-quantity cart-column">
             <button class="btn btn-danger" type="button">REMOVE</button>
         </div>`
@@ -420,13 +484,13 @@ function updateCartTotal() {
     var total = 0
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
-        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var genreElement = cartRow.getElementsByClassName('cart-genre')[0]
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-        var price = parseFloat(priceElement.innerText.replace('$', ''))
+        var genre = parseFloat(genreElement.innerText.replace('$', ''))
         var quantity = quantityElement.value
-        total = total + (price * quantity)
+        total = total + (genre * quantity)
     }
     total = Math.round(total * 100) / 100
-    document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    document.getElementsByClassName('cart-total-genre')[0].innerText = '$' + total
 }
 </script>
