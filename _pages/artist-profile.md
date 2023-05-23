@@ -83,10 +83,10 @@ body {
 </head>
 <body>
   <div class="container">
-    <h1>Artist Genre Sorter</h1>
+    <h1>Artist Genre Finder</h1>
     <label for="genre-input">Enter the desired genre:</label>
     <input type="text" id="genre-input">
-    <button onclick="sortArtists()">Sort Artists</button>
+    <button onclick="sortArtists()">Find Artists</button>
     <div class="artist-list" id="artist-list"></div>
   </div>
 
@@ -156,7 +156,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Omar Apollo</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://apeconcerts.com/wp-content/uploads/2019/07/omarapollo_19_1024-1.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Alt/Indie</span>
@@ -174,7 +174,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">DOMi & JD BECK</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://ichef.bbci.co.uk/news/976/cpsprodpb/13E87/production/_128534518_domiandjdpressphoto.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Jazz</span>
@@ -192,7 +192,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Muni Long</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://variety.com/wp-content/uploads/2022/01/MuniLong.jpg?w=1000" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: R&B/Soul</span>
@@ -210,7 +210,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Samara Joy</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://yt3.googleusercontent.com/QCROAE6X89edEDpIGvoGM9mDqX4kVwu2rpxCYOFbG8N9yVg6DvCZVOxbzqj57yRmwXQM-RjbRg=s900-c-k-c0x00ffffff-no-rj" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Jazz</span>
@@ -230,7 +230,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Latto</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://i.insider.com/642bfb60fcb86b001803092b?width=700" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Hip-Hop/Rap</span>
@@ -248,7 +248,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Måneskin</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://www.nme.com/wp-content/uploads/2022/05/NME%E2%80%93MAneskin-EUROVISION%E2%80%93Credit-Fabio-Germinario-7_2000.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Pop Rock</span>
@@ -266,7 +266,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Tobe Nwigwe</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://www.okayafrica.com/media-library/image.jpg?id=18782629&width=1245&height=700&quality=85&coordinates=0%2C1358%2C0%2C1359" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Hip-Hop/Rap</span>
@@ -284,7 +284,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Molly Tuttle</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://www.paloaltoonline.com/news/photos/2019/september/25/80075_original.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Folk</span>
@@ -302,7 +302,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Wet Leg</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://media.npr.org/assets/img/2022/04/08/hollie-fernando_wet-leg-4-ret-240dpi-cca1fbaad9a5765d204b3d3cd169ff515e84a1dd-s1100-c50.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Alt/Indie</span>
@@ -322,7 +322,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Mabu</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://i.ytimg.com/vi/SDLy2FagJEI/maxresdefault.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Hip-Hop/Rap</span>
@@ -340,7 +340,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Alaina Castillo</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://assets.teenvogue.com/photos/5e874b505bb5580009f27182/16:9/w_2560%2Cc_limit/Unknown.jpeg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Folk</span>
@@ -358,7 +358,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Dean</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://alchetron.com/cdn/dean-south-korean-singer-ef7fe26f-7391-49a8-92ce-fbd0163a4f9-resize-750.jpeg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: R&B/Soul</span>
@@ -376,7 +376,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Sean Yeung</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://github-production-user-asset-6210df.s3.amazonaws.com/111464920/240037244-28741ef6-018b-4e18-8e41-7da3823248fa.png" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: Pop</span>
@@ -394,7 +394,7 @@ body {
           <div class="shop-item">
             <span class="shop-item-title">Amber Mark</span>
           </div>
-          <a href="https://haeryny.github.io/teamteam/doginfo/" class="card button">Learn More</a>
+          <a href="" class="card button">Learn More</a>
           <img class="shop-item-image" src="https://www.billboard.com/wp-content/uploads/2022/01/Billboard_Amber_Mark_006.jpg" alt="ARTIST" width="160" height="120">
           <div class="shop-item-details">
             <span class="shop-item-genre">Genre: R&B/Soul</span>
