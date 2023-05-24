@@ -178,6 +178,91 @@ Random List
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Popcorn-Hacks">Popcorn Hacks<a class="anchor-link" href="#Popcorn-Hacks"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="n">new_words</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># list are indexed 0 to n-1, len is n</span>
+    
+    <span class="c1"># Traverse through list with i index</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">swapped</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># optimize code, so it exits if now swaps on inner loop</span>
+
+        <span class="c1"># Inner traversal using j index</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="p">):</span>  <span class="c1"># n-i as positions on right are in order in bubble</span>
+ 
+            <span class="c1"># Swap if the element KeyN is greater KeyN1</span>
+            <span class="n">keyN</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">keyN1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">keyN</span> <span class="o">&gt;</span> <span class="n">keyN1</span><span class="p">:</span>
+                <span class="n">swapped</span> <span class="o">=</span> <span class="kc">True</span>
+                <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>  <span class="c1"># single line swap</span>
+         
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">swapped</span><span class="p">:</span>  <span class="c1"># if no swaps on inner pass, list is sorted</span>
+            <span class="k">return</span>  <span class="c1"># exit function</span>
+        
+<span class="n">bubbleSort</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="n">new_words</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="nb">list</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>  <span class="c1"># length is n</span>
+    
+    <span class="c1"># List is traversed from index 0 to n-1, n elements</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">smallI</span> <span class="o">=</span> <span class="n">i</span>  <span class="c1"># small index is captured</span>
+        <span class="n">smallV</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># Inner traversal looks at elements after i</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+            <span class="c1"># Save reference if less</span>
+            <span class="n">keyV</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">keyV</span> <span class="o">&lt;</span> <span class="n">smallV</span><span class="p">:</span>
+                <span class="n">smallI</span> <span class="o">=</span> <span class="n">j</span>  <span class="c1"># small index is replaced</span>
+                <span class="n">smallV</span> <span class="o">=</span> <span class="n">keyV</span>
+        
+        <span class="c1"># swap smallest to current i positon, sorting left to right</span>
+        <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">smallI</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">smallI</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>  <span class="c1"># single line swap </span>
+        
+<span class="n">selectionSort</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Discuss">Discuss<a class="anchor-link" href="#Discuss"> </a></h2><p>Answer the following with your group.</p>
 <ul>
 <li>When should you use each algorithm? What makes an algorithm the right choice?</li>
@@ -286,6 +371,169 @@ Random List
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_row</span><span class="p">:</span>  <span class="c1"># finds each key in the row</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
         <span class="n">bubbleSort</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>  <span class="c1"># sort list of people</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original
+[{&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}]
+name
+[{&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}, {&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}]
+age
+[{&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}, {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}]
+city
+[{&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}, {&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>My Own List and Merge Sort</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">arr</span>
+
+    <span class="n">mid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">left_half</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:</span><span class="n">mid</span><span class="p">]</span>
+    <span class="n">right_half</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">:]</span>
+
+    <span class="n">left_half</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">left_half</span><span class="p">)</span>
+    <span class="n">right_half</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">right_half</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">left_half</span><span class="p">,</span> <span class="n">right_half</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">result</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">:])</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">:])</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># my own list</span>
+    <span class="n">list_of_artists</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob Ross&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">895</span><span class="p">,</span> <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Italy&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Leonardo Da Vinci&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">653</span><span class="p">,</span> <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;America&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Van Gogh&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">485</span><span class="p">,</span> <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;France&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Picasso&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">212</span><span class="p">,</span> <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;Rome&quot;</span><span class="p">}</span>
+    <span class="p">]</span>
+    
+    <span class="n">key_row</span> <span class="o">=</span> <span class="n">list_of_artists</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    
+    <span class="c1"># print list as defined</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">list_of_artists</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bubble Sort&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_row</span><span class="p">:</span>  <span class="c1"># finds each key in the row</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="n">bubbleSort</span><span class="p">(</span><span class="n">list_of_artists</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>  <span class="c1"># sort list of people</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">list_of_artists</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Merge Sort&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_row</span><span class="p">:</span>  <span class="c1"># finds each key in the row</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">list_of_artists</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>  <span class="c1"># sort list of people</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">list_of_artists</span><span class="p">)</span>
+
+  
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original
+[{&#39;name&#39;: &#39;Bob Ross&#39;, &#39;age&#39;: 895, &#39;country&#39;: &#39;Italy&#39;}, {&#39;name&#39;: &#39;Leonardo Da Vinci&#39;, &#39;age&#39;: 653, &#39;country&#39;: &#39;America&#39;}, {&#39;name&#39;: &#39;Van Gogh&#39;, &#39;age&#39;: 485, &#39;country&#39;: &#39;France&#39;}, {&#39;name&#39;: &#39;Picasso&#39;, &#39;age&#39;: 212, &#39;country&#39;: &#39;Rome&#39;}]
+Bubble Sort
+name
+[{&#39;name&#39;: &#39;Bob Ross&#39;, &#39;age&#39;: 895, &#39;country&#39;: &#39;Italy&#39;}, {&#39;name&#39;: &#39;Leonardo Da Vinci&#39;, &#39;age&#39;: 653, &#39;country&#39;: &#39;America&#39;}, {&#39;name&#39;: &#39;Picasso&#39;, &#39;age&#39;: 212, &#39;country&#39;: &#39;Rome&#39;}, {&#39;name&#39;: &#39;Van Gogh&#39;, &#39;age&#39;: 485, &#39;country&#39;: &#39;France&#39;}]
+age
+[{&#39;name&#39;: &#39;Picasso&#39;, &#39;age&#39;: 212, &#39;country&#39;: &#39;Rome&#39;}, {&#39;name&#39;: &#39;Van Gogh&#39;, &#39;age&#39;: 485, &#39;country&#39;: &#39;France&#39;}, {&#39;name&#39;: &#39;Leonardo Da Vinci&#39;, &#39;age&#39;: 653, &#39;country&#39;: &#39;America&#39;}, {&#39;name&#39;: &#39;Bob Ross&#39;, &#39;age&#39;: 895, &#39;country&#39;: &#39;Italy&#39;}]
+country
+[{&#39;name&#39;: &#39;Leonardo Da Vinci&#39;, &#39;age&#39;: 653, &#39;country&#39;: &#39;America&#39;}, {&#39;name&#39;: &#39;Van Gogh&#39;, &#39;age&#39;: 485, &#39;country&#39;: &#39;France&#39;}, {&#39;name&#39;: &#39;Bob Ross&#39;, &#39;age&#39;: 895, &#39;country&#39;: &#39;Italy&#39;}, {&#39;name&#39;: &#39;Picasso&#39;, &#39;age&#39;: 212, &#39;country&#39;: &#39;Rome&#39;}]
+Merge Sort
+name
+[{&#39;name&#39;: &#39;Bob Ross&#39;, &#39;age&#39;: 895, &#39;country&#39;: &#39;Italy&#39;}, {&#39;name&#39;: &#39;Leonardo Da Vinci&#39;, &#39;age&#39;: 653, &#39;country&#39;: &#39;America&#39;}, {&#39;name&#39;: &#39;Picasso&#39;, &#39;age&#39;: 212, &#39;country&#39;: &#39;Rome&#39;}, {&#39;name&#39;: &#39;Van Gogh&#39;, &#39;age&#39;: 485, &#39;country&#39;: &#39;France&#39;}]
+age
+[{&#39;name&#39;: &#39;Picasso&#39;, &#39;age&#39;: 212, &#39;country&#39;: &#39;Rome&#39;}, {&#39;name&#39;: &#39;Van Gogh&#39;, &#39;age&#39;: 485, &#39;country&#39;: &#39;France&#39;}, {&#39;name&#39;: &#39;Leonardo Da Vinci&#39;, &#39;age&#39;: 653, &#39;country&#39;: &#39;America&#39;}, {&#39;name&#39;: &#39;Bob Ross&#39;, &#39;age&#39;: 895, &#39;country&#39;: &#39;Italy&#39;}]
+country
+[{&#39;name&#39;: &#39;Leonardo Da Vinci&#39;, &#39;age&#39;: 653, &#39;country&#39;: &#39;America&#39;}, {&#39;name&#39;: &#39;Van Gogh&#39;, &#39;age&#39;: 485, &#39;country&#39;: &#39;France&#39;}, {&#39;name&#39;: &#39;Bob Ross&#39;, &#39;age&#39;: 895, &#39;country&#39;: &#39;Italy&#39;}, {&#39;name&#39;: &#39;Picasso&#39;, &#39;age&#39;: 212, &#39;country&#39;: &#39;Rome&#39;}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Merge Sort on Class Example</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
+    
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_row</span><span class="p">:</span>  <span class="c1"># finds each key in the row</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>  <span class="c1"># sort list of people</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
 </pre></div>
 
