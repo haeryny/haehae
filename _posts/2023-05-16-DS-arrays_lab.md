@@ -248,10 +248,10 @@ For loop with shortcut (*) row expansion
 
 
 
-<div id="790f8256-bdc4-43a6-9d18-d64f0b6b0fea"></div>
+<div id="b013b94e-8a3d-4404-9f02-28763f9857c7"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#790f8256-bdc4-43a6-9d18-d64f0b6b0fea');
+var element = $('#b013b94e-8a3d-4404-9f02-28763f9857c7');
 
 /*
 * Creator: Nighthawk Coding Society
@@ -840,6 +840,74 @@ element.append(arr2D);
 ─██─███─███─██─██─██▄█
 ─██─▀██▄██▀─▀█▄█▀─██▀█
 ▄██▄▄█▀▀▀─────▀──▄██▄▄█
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">clear_output</span>
+
+<span class="c1"># ANSI Color Codes</span>
+<span class="n">ROAD_COLOR</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="se">\u001B</span><span class="s2">[90m</span><span class="se">\u001B</span><span class="s2">[2D&quot;</span>
+<span class="n">CAR_COLOR</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="se">\u001B</span><span class="s2">[33m</span><span class="se">\u001B</span><span class="s2">[2D&quot;</span>
+<span class="n">RESET_COLOR</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="se">\u001B</span><span class="s2">[0m</span><span class="se">\u001B</span><span class="s2">[2D&quot;</span>
+
+<span class="k">def</span> <span class="nf">car_print</span><span class="p">(</span><span class="n">position</span><span class="p">):</span>  <span class="c1"># print car with colors and leading spaces according to position</span>
+    <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">RESET_COLOR</span><span class="p">)</span>
+    
+    <span class="n">sp</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="n">position</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">&quot;     _______&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">&quot; _/|_[_=_=_=_=_=_] &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">&quot;(    0         0  )&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">&quot;=--OO-------OO--=&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ROAD_COLOR</span> <span class="o">+</span> <span class="s2">&quot;--&quot;</span><span class="o">*</span><span class="mi">32</span> <span class="o">+</span> <span class="n">RESET_COLOR</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">car</span><span class="p">():</span>  <span class="c1"># car function, loop/controller for animation speed and times</span>
+    <span class="c1"># loop control variables</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># start at zero</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="mi">60</span>  <span class="c1"># how many times to repeat</span>
+    <span class="n">step</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># count by 2</span>
+
+    <span class="c1"># loop purpose is to animate car moving on the road</span>
+    <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+        <span class="n">car_print</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>  <span class="c1"># call to function with parameter</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+
+        
+<span class="n">car</span><span class="p">()</span>  <span class="c1"># activate/call car function</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+                                                               _______
+                                                           _/|_[_=_=_=_=_=_] 
+                                                          (    0         0  )
+                                                          =--OO-------OO--=
+<span class="ansi-black-intense-fg">----------------------------------------------------------------</span>
 </pre>
 </div>
 </div>
