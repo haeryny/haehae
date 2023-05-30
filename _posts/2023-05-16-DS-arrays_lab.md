@@ -248,10 +248,10 @@ For loop with shortcut (*) row expansion
 
 
 
-<div id="b013b94e-8a3d-4404-9f02-28763f9857c7"></div>
+<div id="20f87592-7276-4e17-923f-dfb4d1d3ce42"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#b013b94e-8a3d-4404-9f02-28763f9857c7');
+var element = $('#20f87592-7276-4e17-923f-dfb4d1d3ce42');
 
 /*
 * Creator: Nighthawk Coding Society
@@ -908,6 +908,134 @@ element.append(arr2D);
                                                           (    0         0  )
                                                           =--OO-------OO--=
 <span class="ansi-black-intense-fg">----------------------------------------------------------------</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pyautogui</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">tkinter</span> <span class="k">as</span> <span class="nn">tk</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1400</span>
+<span class="n">cycle</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">check</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">idle_num</span> <span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">sleep_num</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
+<span class="n">walk_left</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">walk_right</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">event_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">impath</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Users</span><span class="se">\\</span><span class="s1">fx770</span><span class="se">\\</span><span class="s1">Desktop</span><span class="se">\\</span><span class="s1">Project</span><span class="se">\\</span><span class="s1">Buddy</span><span class="se">\\</span><span class="s1">image</span><span class="se">\\</span><span class="s1">&#39;</span>
+<span class="c1">#transfer random no. to event</span>
+<span class="k">def</span> <span class="nf">event</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+ <span class="k">if</span> <span class="n">event_number</span> <span class="ow">in</span> <span class="n">idle_num</span><span class="p">:</span>
+  <span class="n">check</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;idle&#39;</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">cycle</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="c1">#no. 1,2,3,4 = idle</span>
+<span class="k">elif</span> <span class="n">event_number</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+  <span class="n">check</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;from idle to sleep&#39;</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">cycle</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="c1">#no. 5 = idle to sleep</span>
+<span class="k">elif</span> <span class="n">event_number</span> <span class="ow">in</span> <span class="n">walk_left</span><span class="p">:</span>
+  <span class="n">check</span> <span class="o">=</span> <span class="mi">4</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;walking towards left&#39;</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">cycle</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">x</span><span class="p">)</span><span class="c1">#no. 6,7 = walk towards left</span>
+<span class="k">elif</span> <span class="n">event_number</span> <span class="ow">in</span> <span class="n">walk_right</span><span class="p">:</span>
+  <span class="n">check</span> <span class="o">=</span> <span class="mi">5</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;walking towards right&#39;</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">cycle</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">x</span><span class="p">)</span><span class="c1">#no 8,9 = walk towards right</span>
+<span class="k">elif</span> <span class="n">event_number</span> <span class="ow">in</span> <span class="n">sleep_num</span><span class="p">:</span>
+  <span class="n">check</span>  <span class="o">=</span> <span class="mi">2</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;sleep&#39;</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">cycle</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">x</span><span class="p">)</span><span class="c1">#no. 10,11,12,13,15 = sleep</span>
+<span class="k">elif</span> <span class="n">event_number</span> <span class="o">==</span> <span class="mi">14</span><span class="p">:</span>
+  <span class="n">check</span> <span class="o">=</span> <span class="mi">3</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;from sleep to idle&#39;</span><span class="p">)</span>
+  <span class="n">window</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">cycle</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">x</span><span class="p">)</span><span class="c1">#no. 15 = sleep to idle</span>
+<span class="c1">#making gif work </span>
+<span class="k">def</span> <span class="nf">gif_work</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span><span class="n">frames</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">first_num</span><span class="p">,</span><span class="n">last_num</span><span class="p">):</span>
+ <span class="k">if</span> <span class="n">cycle</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">frames</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+  <span class="n">cycle</span><span class="o">+=</span><span class="mi">1</span>
+ <span class="k">else</span><span class="p">:</span>
+  <span class="n">cycle</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="n">event_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">first_num</span><span class="p">,</span><span class="n">last_num</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+ <span class="k">return</span> <span class="n">cycle</span><span class="p">,</span><span class="n">event_number</span>
+<span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+ <span class="c1">#idle</span>
+ <span class="k">if</span> <span class="n">check</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+  <span class="n">frame</span> <span class="o">=</span> <span class="n">idle</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span>
+  <span class="n">cycle</span> <span class="p">,</span><span class="n">event_number</span> <span class="o">=</span> <span class="n">gif_work</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span><span class="n">idle</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+  
+ <span class="c1">#idle to sleep</span>
+ <span class="k">elif</span> <span class="n">check</span> <span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+  <span class="n">frame</span> <span class="o">=</span> <span class="n">idle_to_sleep</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span>
+  <span class="n">cycle</span> <span class="p">,</span><span class="n">event_number</span> <span class="o">=</span> <span class="n">gif_work</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span><span class="n">idle_to_sleep</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="c1">#sleep</span>
+ <span class="k">elif</span> <span class="n">check</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+  <span class="n">frame</span> <span class="o">=</span> <span class="n">sleep</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span>
+  <span class="n">cycle</span> <span class="p">,</span><span class="n">event_number</span> <span class="o">=</span> <span class="n">gif_work</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span><span class="n">sleep</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+<span class="c1">#sleep to idle</span>
+ <span class="k">elif</span> <span class="n">check</span> <span class="o">==</span><span class="mi">3</span><span class="p">:</span>
+  <span class="n">frame</span> <span class="o">=</span> <span class="n">sleep_to_idle</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span>
+  <span class="n">cycle</span> <span class="p">,</span><span class="n">event_number</span> <span class="o">=</span> <span class="n">gif_work</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span><span class="n">sleep_to_idle</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#walk toward left</span>
+ <span class="k">elif</span> <span class="n">check</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+  <span class="n">frame</span> <span class="o">=</span> <span class="n">walk_positive</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span>
+  <span class="n">cycle</span> <span class="p">,</span> <span class="n">event_number</span> <span class="o">=</span> <span class="n">gif_work</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span><span class="n">walk_positive</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+  <span class="n">x</span> <span class="o">-=</span> <span class="mi">3</span>
+<span class="c1">#walk towards right</span>
+ <span class="k">elif</span> <span class="n">check</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+  <span class="n">frame</span> <span class="o">=</span> <span class="n">walk_negative</span><span class="p">[</span><span class="n">cycle</span><span class="p">]</span>
+  <span class="n">cycle</span> <span class="p">,</span> <span class="n">event_number</span> <span class="o">=</span> <span class="n">gif_work</span><span class="p">(</span><span class="n">cycle</span><span class="p">,</span><span class="n">walk_negative</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
+  <span class="n">x</span> <span class="o">-=</span> <span class="o">-</span><span class="mi">3</span>
+ <span class="n">window</span><span class="o">.</span><span class="n">geometry</span><span class="p">(</span><span class="s1">&#39;100x100+&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;+1050&#39;</span><span class="p">)</span>
+ <span class="n">label</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">frame</span><span class="p">)</span>
+ <span class="n">window</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">event</span><span class="p">,</span><span class="n">cycle</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">window</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+<span class="c1">#call buddy&#39;s action gif</span>
+<span class="n">idle</span> <span class="o">=</span> <span class="p">[</span><span class="n">tk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">impath</span><span class="o">+</span><span class="s1">&#39;idle.gif&#39;</span><span class="p">,</span><span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;gif -index </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span><span class="c1">#idle gif</span>
+<span class="n">idle_to_sleep</span> <span class="o">=</span> <span class="p">[</span><span class="n">tk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">impath</span><span class="o">+</span><span class="s1">&#39;idle_to_sleep.gif&#39;</span><span class="p">,</span><span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;gif -index </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span><span class="c1">#idle to sleep gif</span>
+<span class="n">sleep</span> <span class="o">=</span> <span class="p">[</span><span class="n">tk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">impath</span><span class="o">+</span><span class="s1">&#39;sleep.gif&#39;</span><span class="p">,</span><span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;gif -index </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span><span class="c1">#sleep gif</span>
+<span class="n">sleep_to_idle</span> <span class="o">=</span> <span class="p">[</span><span class="n">tk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">impath</span><span class="o">+</span><span class="s1">&#39;sleep_to_idle.gif&#39;</span><span class="p">,</span><span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;gif -index </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span><span class="c1">#sleep to idle gif</span>
+<span class="n">walk_positive</span> <span class="o">=</span> <span class="p">[</span><span class="n">tk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">impath</span><span class="o">+</span><span class="s1">&#39;walking_positive.gif&#39;</span><span class="p">,</span><span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;gif -index </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span><span class="c1">#walk to left gif</span>
+<span class="n">walk_negative</span> <span class="o">=</span> <span class="p">[</span><span class="n">tk</span><span class="o">.</span><span class="n">PhotoImage</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">impath</span><span class="o">+</span><span class="s1">&#39;walking_negative.gif&#39;</span><span class="p">,</span><span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;gif -index </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">)]</span><span class="c1">#walk to right gif</span>
+<span class="c1">#window configuration</span>
+<span class="n">window</span><span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="n">highlightbackground</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">label</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="n">window</span><span class="p">,</span><span class="n">bd</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">bg</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">overrideredirect</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">wm_attributes</span><span class="p">(</span><span class="s1">&#39;-transparentcolor&#39;</span><span class="p">,</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">label</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+<span class="c1">#loop the program</span>
+<span class="n">window</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">cycle</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">event_number</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="n">window</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  Input </span><span class="ansi-green-fg">In [4]</span>
+<span class="ansi-red-fg">    elif event_number == 5:</span>
+    ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
 </pre>
 </div>
 </div>
