@@ -2,12 +2,55 @@
 layout: single
 title: Artists
 ---
-<div>
-  <img src="https://images.squarespace-cdn.com/content/v1/552dc6dae4b036b38b3d7a6e/1596468461467-NJXJZ6LAZ1XB9H8ZW53X/Blue+West.gif" 
-       width="500" 
-       height="500"
-       style="display: block; margin: 0 auto;" />
+<html>
+<div id="demo">
+  <p id="image" onmouseover="animateScript()" on.mouseout="stopAnimate()">
+
+  </p>
 </div>
+
+<style>
+#image {
+  height: 256px;
+  width: 256px;
+  background: url('https://cdn.codeandweb.com/blog/2016/05/10/how-to-create-a-sprite-sheet/spritestrip.png') 0px 0px;
+}
+</style>
+
+<script>
+var tID; //we will use this variable to clear the setInterval()
+
+function stopAnimate() {
+  clearInterval(tID);
+} //end of stopAnimate()
+
+
+function animateScript() {
+
+  var position = 256; //start position for the image slicer
+  const interval = 100; //100 ms of interval for the setInterval()
+  const diff = 256; //diff as a variable for position offset
+  
+  tID = setInterval(() => {
+  
+    document.getElementById("image").style.backgroundPosition =
+      `-${position}px 0px`;
+    //we use the ES6 template literal to insert the variable "position"
+    
+    if (position < 1536) {
+      position = position + diff;
+    }
+    //we increment the position by 256 each time
+    else {
+      position = 256;
+    }
+    //reset the position to 256px, once position exceeds 1536px
+    
+  }, interval); //end of setInterval
+} //end of animateScript()
+</script>  
+<html>
+
 
 <html>
 <head>
